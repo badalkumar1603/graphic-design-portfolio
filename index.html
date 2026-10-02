@@ -6,7 +6,234 @@
 
 <title>Badal | Graphic Designer</title>
 
-<style>
+<style>/* =========================
+   PORTFOLIO POSTERS
+========================= */
+
+.poster {
+  height: 395px;
+  position: relative;
+  overflow: hidden;
+  padding: 32px;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+  color: white;
+}
+
+
+/* =========================
+   BRANDING POSTER
+========================= */
+
+.branding-poster {
+  background:
+    radial-gradient(circle at 75% 25%, #b44cff 0%, transparent 25%),
+    linear-gradient(135deg, #12051f, #5b16a8, #140b28);
+}
+
+.poster-small {
+  font-size: 13px;
+  letter-spacing: 4px;
+  opacity: .75;
+}
+
+.poster-title {
+  position: absolute;
+  left: 32px;
+  bottom: 70px;
+  font-size: 48px;
+  line-height: .9;
+  font-weight: 800;
+  letter-spacing: -2px;
+}
+
+.poster-title span {
+  color: #d16cff;
+}
+
+.poster-circle {
+  position: absolute;
+  width: 170px;
+  height: 170px;
+  border-radius: 50%;
+  right: 45px;
+  top: 75px;
+  border: 2px solid rgba(255,255,255,.7);
+  box-shadow:
+    0 0 30px #d65cff,
+    inset 0 0 30px rgba(255,255,255,.2);
+}
+
+.poster-line {
+  position: absolute;
+  width: 100px;
+  height: 2px;
+  background: white;
+  right: 80px;
+  top: 160px;
+  transform: rotate(-35deg);
+}
+
+.poster-bottom {
+  position: absolute;
+  bottom: 25px;
+  left: 32px;
+  font-size: 11px;
+  letter-spacing: 2px;
+  opacity: .7;
+}
+
+
+/* =========================
+   SOCIAL MEDIA POSTER
+========================= */
+
+.social-poster {
+  background:
+    radial-gradient(circle at 75% 25%, #25d9ff 0%, transparent 25%),
+    linear-gradient(135deg, #071a46, #3030a0, #10132d);
+}
+
+.social-top {
+  font-size: 13px;
+  letter-spacing: 4px;
+  opacity: .8;
+}
+
+.social-big {
+  position: absolute;
+  left: 30px;
+  top: 105px;
+  font-size: 50px;
+  font-weight: 900;
+  line-height: .9;
+}
+
+.social-big span {
+  color: #38dcff;
+}
+
+.social-box {
+  position: absolute;
+  padding: 12px 18px;
+  border: 1px solid rgba(255,255,255,.5);
+  border-radius: 30px;
+  font-size: 11px;
+  letter-spacing: 2px;
+  backdrop-filter: blur(8px);
+}
+
+.box-one {
+  right: 30px;
+  top: 105px;
+  transform: rotate(8deg);
+}
+
+.box-two {
+  right: 80px;
+  top: 165px;
+  transform: rotate(-8deg);
+}
+
+.box-three {
+  right: 35px;
+  top: 225px;
+  transform: rotate(7deg);
+}
+
+.social-bottom {
+  position: absolute;
+  bottom: 25px;
+  left: 30px;
+  font-size: 12px;
+  letter-spacing: 3px;
+  opacity: .7;
+}
+
+
+/* =========================
+   MARKETING POSTER
+========================= */
+
+.marketing-poster {
+  background:
+    radial-gradient(circle at 60% 25%, #ff6bb8 0%, transparent 25%),
+    linear-gradient(135deg, #5e006f, #c21872, #30102f);
+}
+
+.marketing-small {
+  font-size: 12px;
+  letter-spacing: 4px;
+  opacity: .8;
+}
+
+.marketing-title {
+  position: absolute;
+  left: 32px;
+  top: 95px;
+  font-size: 72px;
+  line-height: .8;
+  font-weight: 900;
+}
+
+.marketing-title span {
+  color: #ffd166;
+}
+
+.marketing-text {
+  position: absolute;
+  left: 34px;
+  bottom: 100px;
+  width: 230px;
+  font-size: 16px;
+  line-height: 1.5;
+  opacity: .85;
+}
+
+.marketing-button {
+  position: absolute;
+  left: 32px;
+  bottom: 35px;
+  padding: 11px 20px;
+  border-radius: 30px;
+  background: white;
+  color: #71105e;
+  font-weight: bold;
+  font-size: 12px;
+}
+
+.rocket-shape {
+  position: absolute;
+  right: 45px;
+  top: 65px;
+  font-size: 70px;
+  transform: rotate(-20deg);
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+  .poster {
+    height: 395px;
+  }
+
+  .poster-title {
+    font-size: 42px;
+  }
+
+  .social-big {
+    font-size: 44px;
+  }
+
+  .marketing-title {
+    font-size: 65px;
+  }
+
+}
 *{
     margin:0;
     padding:0;
@@ -491,8 +718,21 @@ footer{
 
         <div class="project">
 
-            <div class="project-preview">
-                🎨
+            <div class="poster branding-poster">
+    <div class="poster-small">CREATIVE STUDIO</div>
+
+    <div class="poster-title">
+        BRAND<br>
+        <span>IDENTITY</span>
+    </div>
+
+    <div class="poster-circle"></div>
+    <div class="poster-line"></div>
+
+    <div class="poster-bottom">
+        LOGO • COLORS • TYPE
+    </div>
+            </div>
             </div>
 
             <div class="project-info">
@@ -511,8 +751,22 @@ footer{
 
         <div class="project">
 
-            <div class="project-preview">
-                📱
+            <div class="poster social-poster">
+    <div class="social-top">SOCIAL MEDIA</div>
+
+    <div class="social-big">
+        MAKE<br>
+        <span>IT POP.</span>
+    </div>
+
+    <div class="social-box box-one">POST</div>
+    <div class="social-box box-two">CREATE</div>
+    <div class="social-box box-three">SHARE</div>
+
+    <div class="social-bottom">
+        @BADAL.DESIGN
+    </div>
+            </div>
             </div>
 
             <div class="project-info">
@@ -531,8 +785,26 @@ footer{
 
         <div class="project">
 
-            <div class="project-preview">
-                🚀
+            <div class="poster marketing-poster">
+    <div class="rocket-shape">✦</div>
+
+    <div class="marketing-small">
+        DIGITAL CAMPAIGN
+    </div>
+
+    <div class="marketing-title">
+        GO<br>
+        <span>BIG.</span>
+    </div>
+
+    <div class="marketing-text">
+        Creative marketing that gets attention.
+    </div>
+
+    <div class="marketing-button">
+        LAUNCH →
+    </div>
+            </div>
             </div>
 
             <div class="project-info">
