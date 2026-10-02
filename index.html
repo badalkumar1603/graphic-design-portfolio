@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Badal Kumar | Graphic Designer</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #0f0f14;
+      color: white;
+      line-height: 1.6;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 8%;
+      position: sticky;
+      top: 0;
+      background: rgba(15,15,20,0.95);
+      z-index: 10;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 25px;
+    }
+
+    nav a:hover {
+      color: #a855f7;
+    }
+
+    .hero {
+      min-height: 90vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 50px 8%;
+    }
+
+    .hero h1 {
+      font-size: 55px;
+      margin-bottom: 15px;
+    }
+
+    .hero h1 span {
+      color: #a855f7;
+    }
+
+    .hero p {
+      color: #bdbdbd;
+      max-width: 650px;
+      margin: auto;
+      font-size: 18px;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 30px;
+      padding: 13px 25px;
+      background: #a855f7;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+    }
+
+    section {
+      padding: 80px 8%;
+    }
+
+    .title {
+      text-align: center;
+      font-size: 35px;
+      margin-bottom: 40px;
+    }
+
+    .about {
+      max-width: 800px;
+      margin: auto;
+      text-align: center;
+      color: #cfcfcf;
+    }
+
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+    }
+
+    .skill {
+      background: #1b1b24;
+      padding: 15px 25px;
+      border-radius: 10px;
+      border: 1px solid #292934;
+    }
+
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+    }
+
+    .project {
+      background: #1b1b24;
+      padding: 20px;
+      border-radius: 12px;
+      transition: 0.3s;
+    }
+
+    .project:hover {
+      transform: translateY(-5px);
+    }
+
+    .project img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 15px;
+    }
+
+    .project h3 {
+      margin-bottom: 8px;
+    }
+
+    .project p {
+      color: #aaa;
+    }
+
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+    .service {
+      background: #1b1b24;
+      padding: 25px;
+      border-radius: 12px;
+      text-align: center;
+    }
+
+    .service h3 {
+      color: #a855f7;
+      margin-bottom: 10px;
+    }
+
+    .contact {
+      text-align: center;
+    }
+
+    .contact p {
+      color: #bbb;
+      margin: 10px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 25px;
+      background: #09090c;
+      color: #888;
+    }
+
+    @media (max-width: 600px) {
+      .hero h1 {
+        font-size: 40px;
+      }
+
+      nav {
+        padding: 15px 5%;
+      }
+
+      nav a {
+        margin-left: 10px;
+        font-size: 14px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav>
+    <div class="logo">Badal.</div>
+
+    <div>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+
+
+  <section class="hero">
+    <div>
+      <h1>Hi, I'm <span>Badal</span></h1>
+
+      <h2>Graphic Designer</h2>
+
+      <p>
+        I create creative and modern designs for brands,
+        social media, businesses and personal projects.
+      </p>
+
+      <a href="#projects" class="btn">View My Work</a>
+    </div>
+  </section>
+
+
+  <section id="about">
+
+    <h2 class="title">About Me</h2>
+
+    <div class="about">
+      <p>
+        I am a BBA student interested in Graphic Design,
+        Digital Marketing and Freelancing. I enjoy creating
+        attractive visual designs and learning new creative skills.
+      </p>
+    </div>
+
+  </section>
+
+
+  <section id="skills">
+
+    <h2 class="title">My Skills</h2>
+
+    <div class="skills">
+
+      <div class="skill">Canva</div>
+      <div class="skill">Graphic Design</div>
+      <div class="skill">Social Media Design</div>
+      <div class="skill">Poster Design</div>
+      <div class="skill">Thumbnail Design</div>
+      <div class="skill">Presentation Design</div>
+      <div class="skill">Basic Photoshop</div>
+      <div class="skill">Digital Marketing</div>
+
+    </div>
+
+  </section>
+
+
+  <section id="projects">
+
+    <h2 class="title">My Projects</h2>
+
+    <div class="projects">
+
+      <div class="project">
+        <img src="https://placehold.co/600x400" alt="Social Media Design">
+
+        <h3>Social Media Post</h3>
+
+        <p>
+          Creative social media design for brand promotion.
+        </p>
+      </div>
+
+
+      <div class="project">
+        <img src="https://placehold.co/600x400" alt="Poster Design">
+
+        <h3>Poster Design</h3>
+
+        <p>
+          Modern promotional poster created for a business.
+        </p>
+      </div>
+
+
+      <div class="project">
+        <img src="https://placehold.co/600x400" alt="Thumbnail Design">
+
+        <h3>YouTube Thumbnail</h3>
+
+        <p>
+          Eye-catching thumbnail design for digital content.
+        </p>
+      </div>
+
+
+      <div class="project">
+        <img src="https://placehold.co/600x400" alt="Business Design">
+
+        <h3>Business Design</h3>
+
+        <p>
+          Branding and promotional design concept.
+        </p>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <section>
+
+    <h2 class="title">Services</h2>
+
+    <div class="services">
+
+      <div class="service">
+        <h3>Social Media</h3>
+        <p>Instagram posts, stories and promotional creatives.</p>
+      </div>
+
+      <div class="service">
+        <h3>Poster Design</h3>
+        <p>Professional posters for events and businesses.</p>
+      </div>
+
+      <div class="service">
+        <h3>Thumbnail</h3>
+        <p>Creative thumbnails designed to attract attention.</p>
+      </div>
+
+      <div class="service">
+        <h3>Presentation</h3>
+        <p>Clean and professional PowerPoint presentations.</p>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <section id="contact">
+
+    <h2 class="title">Let's Work Together</h2>
+
+    <div class="contact">
+
+      <p>Email: your-email@example.com</p>
+
+      <p>Instagram: @yourusername</p>
+
+      <p>GitHub: github.com/yourusername</p>
+
+      <a href="mailto:your-email@example.com" class="btn">
+        Contact Me
+      </a>
+
+    </div>
+
+  </section>
+
+
+  <footer>
+    © 2026 Badal Kumar | Graphic Designer
+  </footer>
+
+</body>
+  </html>
