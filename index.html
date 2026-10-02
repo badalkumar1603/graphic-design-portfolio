@@ -2,1236 +2,209 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Badal — Creative Designer</title>
-
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Badal | Graphic Designer</title>
+<meta name="description" content="Badal - graphic designer for brands, social media and digital marketing. Available for freelance work.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
-
-html{
-    scroll-behavior:smooth;
-}
-
-body{
-    font-family:Inter,Arial,sans-serif;
-    background:#08080d;
-    color:#fff;
-    overflow-x:hidden;
-}
-
-a{
-    text-decoration:none;
-    color:inherit;
-}
-
-.container{
-    width:92%;
-    max-width:1180px;
-    margin:auto;
-}
-
-/* BACKGROUND */
-
-body:before{
-    content:"";
-    position:fixed;
-    width:500px;
-    height:500px;
-    background:#7c3aed;
-    filter:blur(180px);
-    opacity:.13;
-    left:-200px;
-    top:-200px;
-    z-index:-1;
-}
-
-body:after{
-    content:"";
-    position:fixed;
-    width:450px;
-    height:450px;
-    background:#06b6d4;
-    filter:blur(180px);
-    opacity:.08;
-    right:-200px;
-    bottom:-150px;
-    z-index:-1;
-}
-
-/* NAVBAR */
-
-nav{
-    position:sticky;
-    top:0;
-    z-index:999;
-    background:rgba(8,8,13,.78);
-    backdrop-filter:blur(20px);
-    border-bottom:1px solid rgba(255,255,255,.07);
-}
-
-.nav{
-    height:76px;
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-}
-
-.logo{
-    font-size:28px;
-    font-weight:900;
-    letter-spacing:-1px;
-}
-
-.logo span{
-    color:#a855f7;
-}
-
-.menu{
-    display:flex;
-    gap:30px;
-}
-
-.menu a{
-    color:#9999a7;
-    font-size:14px;
-    transition:.3s;
-}
-
-.menu a:hover{
-    color:white;
-}
-
-/* HERO */
-
-.hero{
-    min-height:720px;
-    display:flex;
-    align-items:center;
-}
-
-.hero-grid{
-    display:grid;
-    grid-template-columns:1.2fr .8fr;
-    gap:70px;
-    align-items:center;
-}
-
-.badge{
-    display:inline-block;
-    padding:8px 15px;
-    border:1px solid rgba(168,85,247,.4);
-    background:rgba(168,85,247,.08);
-    border-radius:50px;
-    color:#c084fc;
-    font-size:12px;
-    letter-spacing:1px;
-    margin-bottom:25px;
-}
-
-.hero h1{
-    font-size:clamp(50px,7vw,88px);
-    line-height:.94;
-    letter-spacing:-5px;
-    max-width:850px;
-}
-
-.gradient{
-    background:linear-gradient(
-        90deg,
-        #a855f7,
-        #ec4899,
-        #22d3ee
-    );
-    -webkit-background-clip:text;
-    background-clip:text;
-    color:transparent;
-}
-
-.hero p{
-    color:#9999a7;
-    font-size:17px;
-    max-width:590px;
-    margin:28px 0;
-}
-
-.buttons{
-    display:flex;
-    gap:13px;
-    flex-wrap:wrap;
-}
-
-.btn{
-    padding:13px 21px;
-    border-radius:12px;
-    font-size:13px;
-    font-weight:700;
-    transition:.3s;
-}
-
-.btn:hover{
-    transform:translateY(-3px);
-}
-
-.primary{
-    background:linear-gradient(135deg,#8b5cf6,#ec4899);
-}
-
-.secondary{
-    border:1px solid rgba(255,255,255,.12);
-    background:rgba(255,255,255,.04);
-}
-
-/* PROFILE */
-
-.profile-area{
-    display:flex;
-    justify-content:center;
-}
-
-.profile{
-    width:350px;
-    aspect-ratio:4/5;
-    border-radius:32px;
-    padding:9px;
-    background:linear-gradient(
-        140deg,
-        #a855f7,
-        #ec4899,
-        #22d3ee
-    );
-    box-shadow:0 30px 100px rgba(124,58,237,.25);
-}
-
-.profile-inner{
-    width:100%;
-    height:100%;
-    border-radius:25px;
-    overflow:hidden;
-    background:
-        radial-gradient(circle at 30% 25%,#a855f7 0,transparent 22%),
-        radial-gradient(circle at 75% 70%,#06b6d4 0,transparent 24%),
-        #11111a;
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    justify-content:center;
-}
-
-.profile-icon{
-    width:125px;
-    height:125px;
-    border-radius:50%;
-    border:2px solid rgba(255,255,255,.5);
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    font-size:48px;
-    background:rgba(255,255,255,.08);
-}
-
-.profile-inner h3{
-    margin-top:20px;
-    font-size:25px;
-}
-
-.profile-inner p{
-    margin:5px 0 0;
-    color:#aaa;
-    font-size:13px;
-}
-
-/* COMMON SECTION */
-
-section{
-    padding:105px 0;
-}
-
-.label{
-    color:#a855f7;
-    font-size:11px;
-    letter-spacing:3px;
-    font-weight:800;
-    margin-bottom:12px;
-}
-
-.heading{
-    font-size:clamp(36px,5vw,58px);
-    letter-spacing:-3px;
-    line-height:1;
-}
-
-.subheading{
-    color:#777784;
-    max-width:620px;
-    margin-top:16px;
-}
-
-/* ABOUT */
-
-.about-grid{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:70px;
-}
-
-.about-text{
-    color:#9999a7;
-    font-size:17px;
-    line-height:1.8;
-}
-
-.about-text p{
-    margin-bottom:18px;
-}
-
-.details{
-    display:grid;
-    gap:14px;
-}
-
-.detail{
-    padding:20px;
-    border:1px solid rgba(255,255,255,.07);
-    background:rgba(255,255,255,.025);
-    border-radius:18px;
-}
-
-.detail span{
-    display:block;
-    color:#666673;
-    font-size:11px;
-    letter-spacing:2px;
-    margin-bottom:6px;
-}
-
-.detail strong{
-    font-size:15px;
-}
-
-/* SKILLS */
-
-.skills{
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:18px;
-    margin-top:45px;
-}
-
-.skill{
-    min-height:245px;
-    border:1px solid rgba(255,255,255,.08);
-    border-radius:24px;
-    padding:20px;
-    background:#101018;
-    transition:.35s;
-    overflow:hidden;
-}
-
-.skill:hover{
-    transform:translateY(-8px);
-    border-color:rgba(168,85,247,.45);
-}
-
-.skill-art{
-    height:140px;
-    border-radius:17px;
-    margin-bottom:18px;
-    position:relative;
-    overflow:hidden;
-}
-
-.skill-art:before,
-.skill-art:after{
-    content:"";
-    position:absolute;
-    border-radius:50%;
-}
-
-.canva{
-    background:linear-gradient(135deg,#00c4cc,#7b2cff);
-}
-
-.canva:before{
-    width:90px;
-    height:90px;
-    background:#fff;
-    left:35px;
-    top:25px;
-}
-
-.canva:after{
-    width:90px;
-    height:90px;
-    border:12px solid #7b2cff;
-    right:30px;
-    top:20px;
-}
-
-.graphic{
-    background:linear-gradient(135deg,#ff512f,#dd2476);
-}
-
-.graphic:before{
-    width:100px;
-    height:100px;
-    background:#ffd166;
-    transform:rotate(18deg);
-    left:25px;
-    top:20px;
-}
-
-.graphic:after{
-    width:75px;
-    height:75px;
-    border:8px solid white;
-    right:30px;
-    bottom:18px;
-}
-
-.branding{
-    background:linear-gradient(135deg,#111827,#7c3aed);
-}
-
-.branding:before{
-    width:105px;
-    height:105px;
-    border:3px solid white;
-    left:30px;
-    top:18px;
-}
-
-.branding:after{
-    width:55px;
-    height:55px;
-    background:#ec4899;
-    right:40px;
-    bottom:20px;
-}
-
-.social{
-    background:linear-gradient(135deg,#0ea5e9,#8b5cf6);
-}
-
-.social:before{
-    width:105px;
-    height:70px;
-    border:3px solid white;
-    border-radius:18px;
-    left:28px;
-    top:30px;
-}
-
-.social:after{
-    width:20px;
-    height:20px;
-    background:#fff;
-    right:38px;
-    bottom:30px;
-}
-
-.skill h3{
-    font-size:18px;
-}
-
-.skill p{
-    color:#70707e;
-    font-size:12px;
-    margin-top:5px;
-}
-
-/* PROJECTS */
-
-.projects{
-    display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:25px;
-    margin-top:45px;
-}
-
-.project{
-    border:1px solid rgba(255,255,255,.08);
-    background:#101018;
-    border-radius:27px;
-    overflow:hidden;
-    transition:.35s;
-}
-
-.project:hover{
-    transform:translateY(-8px);
-    border-color:rgba(168,85,247,.4);
-}
-
-.poster{
-    width:100%;
-    aspect-ratio:16/10;
-    position:relative;
-    overflow:hidden;
-}
-
-/* POSTER 1 */
-
-.poster-one{
-    background:
-        radial-gradient(circle at 75% 25%,#e879f9,transparent 22%),
-        linear-gradient(135deg,#16052b,#5b21b6,#111827);
-}
-
-.poster-one .big{
-    position:absolute;
-    left:35px;
-    bottom:42px;
-    font-size:54px;
-    line-height:.82;
-    font-weight:900;
-    letter-spacing:-3px;
-}
-
-.poster-one .big span{
-    color:#e879f9;
-}
-
-.poster-one .circle{
-    position:absolute;
-    width:175px;
-    height:175px;
-    border:2px solid rgba(255,255,255,.75);
-    border-radius:50%;
-    right:50px;
-    top:45px;
-}
-
-.poster-one .small{
-    position:absolute;
-    left:37px;
-    top:30px;
-    font-size:11px;
-    letter-spacing:4px;
-}
-
-/* POSTER 2 */
-
-.poster-two{
-    background:
-        radial-gradient(circle at 75% 30%,#22d3ee,transparent 22%),
-        linear-gradient(135deg,#06152f,#1e3a8a,#111827);
-}
-
-.poster-two .main{
-    position:absolute;
-    left:35px;
-    top:65px;
-    font-size:55px;
-    line-height:.85;
-    font-weight:900;
-}
-
-.poster-two .main span{
-    color:#22d3ee;
-}
-
-.pill{
-    position:absolute;
-    padding:10px 17px;
-    border:1px solid rgba(255,255,255,.5);
-    border-radius:40px;
-    font-size:10px;
-    letter-spacing:2px;
-}
-
-.pill.one{
-    right:35px;
-    top:60px;
-    transform:rotate(8deg);
-}
-
-.pill.two{
-    right:65px;
-    top:120px;
-    transform:rotate(-8deg);
-}
-
-.pill.three{
-    right:30px;
-    top:180px;
-    transform:rotate(7deg);
-}
-
-/* POSTER 3 */
-
-.poster-three{
-    background:
-        radial-gradient(circle at 65% 20%,#fb7185,transparent 23%),
-        linear-gradient(135deg,#3b0764,#be185d,#1f1029);
-}
-
-.poster-three .small{
-    position:absolute;
-    top:30px;
-    left:35px;
-    font-size:11px;
-    letter-spacing:4px;
-}
-
-.poster-three .big{
-    position:absolute;
-    left:35px;
-    top:72px;
-    font-size:70px;
-    line-height:.8;
-    font-weight:900;
-}
-
-.poster-three .big span{
-    color:#fde047;
-}
-
-.poster-three .star{
-    position:absolute;
-    right:55px;
-    top:55px;
-    font-size:95px;
-    color:#fde047;
-}
-
-.poster-three .button{
-    position:absolute;
-    left:35px;
-    bottom:32px;
-    background:#fff;
-    color:#4c164c;
-    padding:9px 17px;
-    border-radius:30px;
-    font-size:10px;
-    font-weight:800;
-}
-
-/* POSTER 4 */
-
-.poster-four{
-    background:
-        radial-gradient(circle at 30% 30%,#38bdf8,transparent 22%),
-        linear-gradient(135deg,#082f49,#0f766e,#111827);
-}
-
-.poster-four .title{
-    position:absolute;
-    left:35px;
-    bottom:42px;
-    font-size:48px;
-    line-height:.85;
-    font-weight:900;
-}
-
-.poster-four .title span{
-    color:#67e8f9;
-}
-
-.poster-four .grid{
-    position:absolute;
-    width:230px;
-    height:230px;
-    right:25px;
-    top:25px;
-    background:
-        linear-gradient(rgba(255,255,255,.16) 1px,transparent 1px),
-        linear-gradient(90deg,rgba(255,255,255,.16) 1px,transparent 1px);
-    background-size:30px 30px;
-    transform:rotate(-8deg);
-}
-
-.project-info{
-    padding:23px;
-}
-
-.project-info .category{
-    color:#a855f7;
-    font-size:10px;
-    letter-spacing:2px;
-    margin-bottom:7px;
-}
-
-.project-info h3{
-    font-size:22px;
-}
-
-.project-info p{
-    color:#777784;
-    font-size:13px;
-    margin-top:6px;
-}
-
-/* SERVICES */
-
-.services{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:18px;
-    margin-top:45px;
-}
-
-.service{
-    padding:30px;
-    min-height:210px;
-    border-radius:23px;
-    border:1px solid rgba(255,255,255,.08);
-    background:#101018;
-}
-
-.service-number{
-    color:#a855f7;
-    font-size:12px;
-    margin-bottom:55px;
-}
-
-.service h3{
-    font-size:21px;
-    margin-bottom:9px;
-}
-
-.service p{
-    color:#777784;
-    font-size:13px;
-}
-
-/* CONTACT */
-
-.contact{
-    text-align:center;
-    padding:85px 30px;
-    border-radius:35px;
-    border:1px solid rgba(255,255,255,.08);
-    background:
-        radial-gradient(circle at 50% 0%,rgba(168,85,247,.25),transparent 55%),
-        #101018;
-}
-
-.contact h2{
-    font-size:clamp(40px,6vw,70px);
-    line-height:.95;
-    letter-spacing:-3px;
-    margin:14px 0 20px;
-}
-
-.contact p{
-    color:#777784;
-    max-width:550px;
-    margin:auto;
-}
-
-.contact-buttons{
-    display:flex;
-    justify-content:center;
-    gap:12px;
-    margin-top:30px;
-    flex-wrap:wrap;
-}
-
-/* FOOTER */
-
-footer{
-    padding:35px 0;
-    border-top:1px solid rgba(255,255,255,.06);
-    color:#666673;
-    font-size:12px;
-    margin-top:100px;
-}
-
-.footer{
-    display:flex;
-    justify-content:space-between;
-}
-
-/* RESPONSIVE */
-
-@media(max-width:950px){
-
-    .hero-grid{
-        grid-template-columns:1fr;
-        text-align:center;
-    }
-
-    .hero p{
-        margin-left:auto;
-        margin-right:auto;
-    }
-
-    .buttons{
-        justify-content:center;
-    }
-
-    .profile-area{
-        order:-1;
-    }
-
-    .skills{
-        grid-template-columns:repeat(2,1fr);
-    }
-
-    .about-grid{
-        grid-template-columns:1fr;
-    }
-
-    .services{
-        grid-template-columns:1fr;
-    }
-}
-
-@media(max-width:650px){
-
-    .menu{
-        gap:12px;
-    }
-
-    .menu a{
-        font-size:12px;
-    }
-
-    .hero{
-        padding:70px 0;
-    }
-
-    .hero h1{
-        letter-spacing:-3px;
-    }
-
-    .profile{
-        width:290px;
-    }
-
-    .skills{
-        grid-template-columns:1fr;
-    }
-
-    .projects{
-        grid-template-columns:1fr;
-    }
-
-    .footer{
-        flex-direction:column;
-        text-align:center;
-        gap:8px;
-    }
-}
+:root{--ink:#12142B;--ink2:#1C1F3F;--paper:#EEF0F6;--blue:#3D5AFE;--pink:#FF4D8D;--sun:#FFD23F;--mint:#2EE6A6;--mute:#9AA0C3}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',sans-serif;background:var(--ink);color:var(--paper);line-height:1.6;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+:focus-visible{outline:3px solid var(--sun);outline-offset:3px}
+.wrap{max-width:1100px;margin:0 auto;padding:0 22px}
+h1,h2,h3,.logo{font-family:'Syne',sans-serif}
+
+/* nav */
+header{position:sticky;top:0;z-index:20;background:rgba(18,20,43,.88);backdrop-filter:blur(12px);border-bottom:1px solid #ffffff14}
+nav{display:flex;justify-content:space-between;align-items:center;height:64px}
+.logo{font-weight:800;font-size:1.5rem}
+.logo i{font-style:normal;color:var(--pink)}
+nav ul{display:flex;gap:22px;list-style:none;font-weight:500;font-size:.95rem;color:var(--mute)}
+nav ul a:hover{color:#fff}
+
+/* hero */
+.hero{padding:56px 0 72px;position:relative;background:
+radial-gradient(500px 360px at 85% 20%,#3d5afe44,transparent 70%),
+radial-gradient(420px 300px at 5% 80%,#ff4d8d2e,transparent 70%)}
+.hero .wrap{display:grid;gap:48px;align-items:center}
+.status{display:inline-flex;align-items:center;gap:9px;padding:7px 14px;border:1px solid #ffffff2e;border-radius:99px;font-size:.88rem;margin-bottom:22px}
+.status b{width:9px;height:9px;border-radius:50%;background:var(--mint);box-shadow:0 0 0 4px #2ee6a633}
+h1{font-size:clamp(2.6rem,10vw,5.2rem);line-height:1;font-weight:800;letter-spacing:-.03em}
+h1 span{display:block;color:transparent;-webkit-text-stroke:2px var(--paper)}
+.lead{margin:22px 0 30px;color:#C6CAE6;font-size:1.1rem;max-width:34ch}
+.btns{display:flex;gap:12px;flex-wrap:wrap}
+.btn{padding:14px 26px;border-radius:12px;font-weight:700;transition:transform .2s}
+.btn:hover{transform:translateY(-3px)}
+.btn.main{background:var(--pink);color:#fff}
+.btn.alt{border:1.5px solid #ffffff44}
+
+/* poster component */
+.p{position:relative;overflow:hidden;border-radius:14px;background:linear-gradient(145deg,var(--a),var(--b));display:flex;flex-direction:column;justify-content:flex-end;padding:18px;color:var(--c,#fff);isolation:isolate}
+.p::before{content:"";position:absolute;width:70%;aspect-ratio:1;border-radius:50%;background:var(--d);right:-18%;top:-14%;z-index:-1;opacity:.9}
+.p::after{content:"";position:absolute;width:46%;height:46%;border:5px solid var(--c,#fff);left:-12%;bottom:22%;transform:rotate(18deg);z-index:-1;opacity:.35}
+.p .t{font-family:'Syne',sans-serif;font-weight:800;line-height:.95;font-size:clamp(1.6rem,6vw,2.3rem);letter-spacing:-.02em}
+.p small{margin-top:8px;font-size:.78rem;font-weight:700;opacity:.85}
+.p img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:2}
+.p1{--a:#3D5AFE;--b:#12142B;--d:#FF4D8D}
+.p2{--a:#FFD23F;--b:#FF9F1C;--d:#12142B;--c:#12142B}
+.p3{--a:#FF4D8D;--b:#7B2FF7;--d:#FFD23F}
+.p4{--a:#2EE6A6;--b:#0B8F73;--d:#12142B;--c:#0A1A18}
+.p5{--a:#12142B;--b:#3D5AFE;--d:#2EE6A6}
+.p6{--a:#EEF0F6;--b:#B9C2F5;--d:#3D5AFE;--c:#12142B}
+
+/* hero poster stack: one entrance moment */
+.stack{position:relative;height:420px;max-width:440px;width:100%;margin:0 auto}
+.stack .p{position:absolute;width:56%;aspect-ratio:3/4;box-shadow:0 24px 50px #0008;animation:drop .9s cubic-bezier(.2,.8,.2,1) both}
+.stack .s1{left:0;top:30px;transform:rotate(-8deg)}
+.stack .s2{right:0;top:0;transform:rotate(7deg);animation-delay:.15s}
+.stack .s3{left:22%;bottom:0;transform:rotate(-1deg);animation-delay:.3s;z-index:3}
+@keyframes drop{from{opacity:0;translate:0 60px}to{opacity:1;translate:0 0}}
+
+/* sections */
+section{padding:84px 0}
+.head{margin-bottom:40px}
+h2{font-size:clamp(2rem,6vw,3rem);line-height:1.05;letter-spacing:-.02em}
+.head p{color:var(--mute);margin-top:10px;max-width:46ch}
+.light{background:var(--paper);color:var(--ink)}
+.light .head p{color:#5B6086}
+
+.skills{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(230px,1fr))}
+.sk{padding:26px;border-radius:16px;background:#fff;border:2px solid var(--ink)}
+.sk:nth-child(1){box-shadow:6px 6px 0 var(--blue)}
+.sk:nth-child(2){box-shadow:6px 6px 0 var(--pink)}
+.sk:nth-child(3){box-shadow:6px 6px 0 var(--sun)}
+.sk:nth-child(4){box-shadow:6px 6px 0 var(--mint)}
+.sk h3{font-size:1.2rem;margin-bottom:6px}
+.sk p{color:#4A4F78;font-size:.95rem}
+
+.grid{display:grid;gap:26px;grid-template-columns:repeat(auto-fill,minmax(260px,1fr))}
+.card .p{aspect-ratio:4/5;transition:transform .3s}
+.card:hover .p{transform:translateY(-6px) rotate(-1deg)}
+.card h3{margin-top:14px;font-size:1.1rem}
+.card span{color:var(--mute);font-size:.9rem}
+.wide .p{aspect-ratio:16/9}
+
+.about{display:grid;gap:30px}
+.about p{color:#C6CAE6;max-width:52ch;font-size:1.08rem}
+.tools{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+.tools b{padding:8px 16px;border-radius:99px;background:var(--ink2);font-weight:500;font-size:.9rem;border:1px solid #ffffff1f}
+
+.contact{text-align:center;background:linear-gradient(135deg,var(--blue),var(--pink));color:#fff}
+.contact h2{font-size:clamp(2.2rem,8vw,4.2rem)}
+.contact p{margin:14px auto 30px;max-width:40ch;opacity:.92}
+.contact .btns{justify-content:center}
+.contact .btn.main{background:#fff;color:var(--ink)}
+.contact .btn.alt{border-color:#fff9}
+footer{padding:26px 0;text-align:center;color:var(--mute);font-size:.9rem}
+
+@media(min-width:860px){
+.hero .wrap{grid-template-columns:1.1fr .9fr}
+.about{grid-template-columns:1fr 1fr;align-items:start}
+}
+@media(max-width:560px){nav ul{gap:14px;font-size:.88rem}.stack{height:360px}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
 </style>
 </head>
-
 <body>
 
-<!-- NAVBAR -->
-
-<nav>
-<div class="container nav">
-
-    <a href="#" class="logo">
-        Badal<span>.</span>
-    </a>
-
-    <div class="menu">
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#work">Work</a>
-        <a href="#contact">Contact</a>
-    </div>
-
-</div>
+<header>
+<nav class="wrap" aria-label="Main">
+<a class="logo" href="#top">Badal<i>.</i></a>
+<ul>
+<li><a href="#skills">Skills</a></li>
+<li><a href="#work">Work</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
 </nav>
+</header>
 
-
-<!-- HERO -->
-
+<main id="top">
 <section class="hero">
-
-<div class="container hero-grid">
-
-    <div>
-
-        <div class="badge">
-            CREATIVE DESIGNER
-        </div>
-
-        <h1>
-            I create
-            <span class="gradient">
-                visuals
-            </span>
-            that stand out.
-        </h1>
-
-        <p>
-            Graphic design, branding and social media
-            creatives designed with a modern and
-            professional visual approach.
-        </p>
-
-        <div class="buttons">
-
-            <a href="#work" class="btn primary">
-                Explore My Work
-            </a>
-
-            <a href="#contact" class="btn secondary">
-                Contact Me
-            </a>
-
-        </div>
-
-    </div>
-
-
-    <!-- PHOTO AREA -->
-
-    <div class="profile-area">
-
-        <div class="profile">
-
-            <div class="profile-inner">
-
-                <!--
-                BAAD MEIN YAHAN TUMHARI PHOTO LAGA SAKTE HAIN.
-                PHOTO KA NAAM profile.jpg RAKHNA.
-                -->
-
-                <div class="profile-icon">
-                    ✦
-                </div>
-
-                <h3>Badal</h3>
-
-                <p>
-                    Graphic Designer
-                </p>
-
-            </div>
-
-        </div>
-
-    </div>
-
+<div class="wrap">
+<div>
+<div class="status"><b></b>Available for freelance</div>
+<h1>Designs that<span>get noticed.</span></h1>
+<p class="lead">I'm Badal, a graphic designer making posters, social media creatives and brand visuals that look sharp and sell.</p>
+<div class="btns">
+<a class="btn main" href="#work">View my work</a>
+<a class="btn alt" href="#contact">Hire me</a>
+</div>
 </div>
 
-</section>
-
-
-<!-- ABOUT -->
-
-<section id="about">
-
-<div class="container">
-
-    <div class="label">
-        ABOUT ME
-    </div>
-
-    <h2 class="heading">
-        Design with purpose.
-    </h2>
-
-    <p class="subheading">
-        A little about my creative journey and what I love doing.
-    </p>
-
-
-    <div class="about-grid" style="margin-top:50px;">
-
-        <div class="about-text">
-
-            <p>
-                Hi, I'm Badal — a creative designer
-                interested in graphic design, branding
-                and digital content.
-            </p>
-
-            <p>
-                I enjoy turning simple ideas into
-                clean, attractive and meaningful
-                visual designs.
-            </p>
-
-            <p>
-                I'm continuously improving my skills
-                and building projects for my portfolio.
-            </p>
-
-        </div>
-
-
-        <div class="details">
-
-            <div class="detail">
-                <span>ROLE</span>
-                <strong>Graphic Designer</strong>
-            </div>
-
-            <div class="detail">
-                <span>FOCUS</span>
-                <strong>Branding • Social Media • Posters</strong>
-            </div>
-
-            <div class="detail">
-                <span>WORK</span>
-                <strong>Freelance & Creative Projects</strong>
-            </div>
-
-        </div>
-
-    </div>
-
+<div class="stack" aria-hidden="true">
+<!-- Apni images yahan lagao: images/hero1.svg, hero2.jpg, hero3.jpg -->
+<div class="p p3 s1"><span class="t">Event<br>Night</span><img src="images/hero1.svg" alt="" onerror="this.remove()"></div>
+<div class="p p2 s2"><span class="t">Fresh<br>Brand</span><img src="images/hero2.svg" alt="" onerror="this.remove()"></div>
+<div class="p p1 s3"><span class="t">Make it<br>bold.</span><small>Poster design</small><img src="images/hero3.svg" alt="" onerror="this.remove()"></div>
 </div>
-
-</section>
-
-
-<!-- SKILLS -->
-
-<section id="skills">
-
-<div class="container">
-
-    <div class="label">
-        SKILLS
-    </div>
-
-    <h2 class="heading">
-        My creative toolkit.
-    </h2>
-
-    <p class="subheading">
-        Tools and areas I use to create digital designs.
-    </p>
-
-
-    <div class="skills">
-
-
-        <div class="skill">
-
-            <div class="skill-art canva"></div>
-
-            <h3>Canva</h3>
-
-            <p>
-                Social media posts & visual creatives
-            </p>
-
-        </div>
-
-
-        <div class="skill">
-
-            <div class="skill-art graphic"></div>
-
-            <h3>Graphic Design</h3>
-
-            <p>
-                Posters, banners & digital graphics
-            </p>
-
-        </div>
-
-
-        <div class="skill">
-
-            <div class="skill-art branding"></div>
-
-            <h3>Branding</h3>
-
-            <p>
-                Logo, identity & visual direction
-            </p>
-
-        </div>
-
-
-        <div class="skill">
-
-            <div class="skill-art social"></div>
-
-            <h3>Social Media</h3>
-
-            <p>
-                Creative content & campaigns
-            </p>
-
-        </div>
-
-
-    </div>
-
 </div>
-
 </section>
 
-
-<!-- WORK -->
+<section class="light" id="skills">
+<div class="wrap">
+<div class="head">
+<h2>What I do</h2>
+<p>Clean visuals for brands that want to stand out online.</p>
+</div>
+<div class="skills">
+<div class="sk"><h3>Posters and banners</h3><p>Event, offer and festival posters that grab attention fast.</p></div>
+<div class="sk"><h3>Social media design</h3><p>Instagram posts, stories and carousels with a consistent look.</p></div>
+<div class="sk"><h3>Branding</h3><p>Logos, colour palettes and simple brand kits.</p></div>
+<div class="sk"><h3>Video and thumbnails</h3><p>Video editing and YouTube thumbnails built for clicks.</p></div>
+</div>
+</div>
+</section>
 
 <section id="work">
+<div class="wrap">
+<div class="head">
+<h2>Selected work</h2>
+<p>A few projects from my portfolio.</p>
+</div>
+<div class="grid">
+<!-- Har card me images/workN.jpg daalo, wo placeholder art ki jagah dikhegi -->
+<article class="card"><div class="p p1"><span class="t">Brand<br>Identity</span><small>Logo and colours</small><img src="images/work1.svg" alt="Brand identity project" onerror="this.remove()"></div><h3>Brand identity</h3><span>Logo, branding</span></article>
+<article class="card"><div class="p p3"><span class="t">Social<br>Media</span><small>Instagram creative</small><img src="images/work2.svg" alt="Social media post design" onerror="this.remove()"></div><h3>Social media post</h3><span>Instagram, marketing</span></article>
+<article class="card"><div class="p p2"><span class="t">Big<br>Sale</span><small>Offer poster</small><img src="images/work3.svg" alt="Offer poster design" onerror="this.remove()"></div><h3>Offer poster</h3><span>Print, promotion</span></article>
+<article class="card"><div class="p p4"><span class="t">Game<br>On</span><small>Event poster</small><img src="images/work4.svg" alt="Event poster design" onerror="this.remove()"></div><h3>Event poster</h3><span>Poster design</span></article>
+<article class="card"><div class="p p5"><span class="t">Watch<br>Now</span><small>Video thumbnail</small><img src="images/work5.svg" alt="Video thumbnail design" onerror="this.remove()"></div><h3>YouTube thumbnail</h3><span>Video, content</span></article>
+<article class="card"><div class="p p6"><span class="t">Launch<br>Day</span><small>Web banner</small><img src="images/work6.svg" alt="Web banner design" onerror="this.remove()"></div><h3>Ad banner</h3><span>Digital marketing</span></article>
+</div>
+</div>
+</section>
 
-<div class="container">
+<section id="about" style="background:var(--ink2)">
+<div class="wrap about">
+<div>
+<h2>About me</h2>
+</div>
+<div>
+<p>I'm a BBA Finance student who designs on the side. That mix helps me understand what a brand needs: visuals that look good and also bring results. I work on posters, social media, video editing and digital marketing.</p>
+<div class="tools">
+<b>Photoshop</b><b>Canva</b><b>Video editing</b><b>Social media</b><b>Presentations</b>
+</div>
+</div>
+</div>
+</section>
 
-    <div class="label">
-        SELECTED WORK
-    </div>
+<section class="contact" id="contact">
+<div class="wrap">
+<h2>Have a project?<br>Let's talk.</h2>
+<p>Tell me what you need and I'll get back to you with ideas and a quote.</p>
+<div class="btns">
+<a class="btn main" href="mailto:youremail@gmail.com">Send an email</a>
+<a class="btn alt" href="https://wa.me/91XXXXXXXXXX" target="_blank" rel="noopener">WhatsApp me</a>
+<a class="btn alt" href="https://instagram.com/yourusername" target="_blank" rel="noopener">Instagram</a>
+</div>
+</div>
+</section>
+</main>
 
-    <h2 class="heading">
-        Featured projects.
-    </h2>
-
-    <p class="subheading">
-        A selection of visual concepts created for my portfolio.
-    </p>
-
-
-    <div class="projects">
-
-
-        <!-- PROJECT 1 -->
-
-        <article class="project">
-
-            <div class="poster poster-one">
-
-                <div class="small">
-                    BRANDING / 01
-                </div>
-
-                <div class="circle"></div>
-
-                <div class="big">
-                    BRAND<br>
-                    <span>IDENTITY</span>
-                </div>
-
-            </div>
-
-            <div class="project-info">
-
-                <div class="category">
-                    BRANDING
-                </div>
-
-                <h3>
-                    Brand Identity
-                </h3>
-
-                <p>
-                    Modern identity concept with
-                    a bold visual direction.
-                </p>
-
-            </div>
-
-        </article>
-
-
-        <!-- PROJECT 2 -->
-
-        <article class="project">
-
-            <div class="poster poster-two">
-
-                <div class="main">
-                    MAKE<br>
-                    <span>IT POP.</span>
-                </div>
-
-                <div class="pill one">
-                    CREATE
-                </div>
-
-                <div class="pill two">
-                    DESIGN
-                </div>
-
-                <div class="pill three">
-                    SHARE
-                </div>
-
-            </div>
-
-            <div class="project-info">
-
-                <div class="category">
-                    SOCIAL MEDIA
-                </div>
-
-                <h3>
-                    Social Media Campaign
-                </h3>
-
-                <p>
-                    Digital campaign concept designed
-                    for modern social platforms.
-                </p>
-
-            </div>
-
-        </article>
-
-
-        <!-- PROJECT 3 -->
-
-        <article class="project">
-
-            <div class="poster poster-three">
-
-                <div class="small">
-                    DIGITAL CAMPAIGN / 03
-                </div>
-
-                <div class="big">
-                    GO<br>
-                    <span>BIG.</span>
-                </div>
-
-                <div class="star">
-                    ✦
-                </div>
-
-                <div class="button">
-                    LAUNCH →
-                </div>
-
-            </div>
-
-            <div class="project-info">
-
-                <div class="category">
-                    MARKETING
-                </div>
-
-                <h3>
-                    Marketing Creative
-                </h3>
-
-                <p>
-                    Promotional design created to
-                    capture attention.
-                </p>
-
-            </div>
-
-        </article>
-
-
-        <!-- PROJECT 4 -->
-
-        <article class="project">
-
-            <div class="poster poster-four">
-
-                <div class="grid"></div>
-
-                <div class="title">
-                    DIGITAL<br>
-                    <span>CREATIVE</span>
-                </div>
-
-            </div>
-
-            <div class="project-info">
-
-            
+<footer>&copy; 2026 Badal. All rights reserved.</footer>
+</body>
+</html>
