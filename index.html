@@ -3,750 +3,907 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Badal — Graphic Designer</title>
-
-<meta name="description" content="Badal — Graphic Designer Portfolio">
+<title>Badal — Creative Designer</title>
 
 <style>
-
-/* =====================================================
-   GLOBAL
-===================================================== */
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
-html {
-    scroll-behavior: smooth;
+html{
+    scroll-behavior:smooth;
 }
 
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    background: #07080f;
-    color: #ffffff;
-    line-height: 1.6;
-    overflow-x: hidden;
+body{
+    font-family:Inter,Arial,sans-serif;
+    background:#08080d;
+    color:#fff;
+    overflow-x:hidden;
 }
 
-a {
-    color: inherit;
-    text-decoration: none;
+a{
+    text-decoration:none;
+    color:inherit;
 }
 
-img {
-    display: block;
-    max-width: 100%;
+.container{
+    width:92%;
+    max-width:1180px;
+    margin:auto;
 }
 
-.container {
-    width: min(1150px, 92%);
-    margin: auto;
+/* BACKGROUND */
+
+body:before{
+    content:"";
+    position:fixed;
+    width:500px;
+    height:500px;
+    background:#7c3aed;
+    filter:blur(180px);
+    opacity:.13;
+    left:-200px;
+    top:-200px;
+    z-index:-1;
 }
 
-
-/* =====================================================
-   BACKGROUND
-===================================================== */
-
-body::before {
-    content: "";
-    position: fixed;
-    width: 500px;
-    height: 500px;
-    background: #7c3cff;
-    filter: blur(180px);
-    opacity: .12;
-    top: -180px;
-    left: -180px;
-    pointer-events: none;
-    z-index: -1;
+body:after{
+    content:"";
+    position:fixed;
+    width:450px;
+    height:450px;
+    background:#06b6d4;
+    filter:blur(180px);
+    opacity:.08;
+    right:-200px;
+    bottom:-150px;
+    z-index:-1;
 }
 
-body::after {
-    content: "";
-    position: fixed;
-    width: 450px;
-    height: 450px;
-    background: #00bfff;
-    filter: blur(180px);
-    opacity: .09;
-    right: -150px;
-    bottom: -150px;
-    pointer-events: none;
-    z-index: -1;
+/* NAVBAR */
+
+nav{
+    position:sticky;
+    top:0;
+    z-index:999;
+    background:rgba(8,8,13,.78);
+    backdrop-filter:blur(20px);
+    border-bottom:1px solid rgba(255,255,255,.07);
 }
 
-
-/* =====================================================
-   NAVBAR
-===================================================== */
-
-.navbar {
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    background: rgba(7, 8, 15, .78);
-    backdrop-filter: blur(18px);
-    border-bottom: 1px solid rgba(255,255,255,.07);
+.nav{
+    height:76px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
 }
 
-.nav-inner {
-    min-height: 76px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+.logo{
+    font-size:28px;
+    font-weight:900;
+    letter-spacing:-1px;
 }
 
-.logo {
-    font-size: 30px;
-    font-weight: 800;
-    letter-spacing: -1px;
+.logo span{
+    color:#a855f7;
 }
 
-.logo span {
-    color: #a855f7;
+.menu{
+    display:flex;
+    gap:30px;
 }
 
-.nav-links {
-    display: flex;
-    gap: 30px;
+.menu a{
+    color:#9999a7;
+    font-size:14px;
+    transition:.3s;
 }
 
-.nav-links a {
-    color: #c9c9d3;
-    font-size: 15px;
-    transition: .3s;
+.menu a:hover{
+    color:white;
 }
 
-.nav-links a:hover {
-    color: #ffffff;
+/* HERO */
+
+.hero{
+    min-height:720px;
+    display:flex;
+    align-items:center;
 }
 
-
-/* =====================================================
-   HERO
-===================================================== */
-
-.hero {
-    min-height: 720px;
-    display: flex;
-    align-items: center;
-    padding: 90px 0;
+.hero-grid{
+    display:grid;
+    grid-template-columns:1.2fr .8fr;
+    gap:70px;
+    align-items:center;
 }
 
-.hero-grid {
-    display: grid;
-    grid-template-columns: 1.15fr .85fr;
-    gap: 70px;
-    align-items: center;
+.badge{
+    display:inline-block;
+    padding:8px 15px;
+    border:1px solid rgba(168,85,247,.4);
+    background:rgba(168,85,247,.08);
+    border-radius:50px;
+    color:#c084fc;
+    font-size:12px;
+    letter-spacing:1px;
+    margin-bottom:25px;
 }
 
-.hero-tag {
-    display: inline-block;
-    padding: 8px 14px;
-    border: 1px solid rgba(168,85,247,.4);
-    background: rgba(168,85,247,.08);
-    border-radius: 50px;
-    color: #c084fc;
-    font-size: 13px;
-    margin-bottom: 25px;
+.hero h1{
+    font-size:clamp(50px,7vw,88px);
+    line-height:.94;
+    letter-spacing:-5px;
+    max-width:850px;
 }
 
-.hero h1 {
-    font-size: clamp(50px, 7vw, 86px);
-    line-height: .98;
-    letter-spacing: -4px;
-    margin-bottom: 25px;
-}
-
-.gradient-text {
-    background: linear-gradient(90deg, #a855f7, #ec4899, #38bdf8);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-}
-
-.hero-description {
-    color: #a7a7b5;
-    max-width: 590px;
-    font-size: 18px;
-    margin-bottom: 32px;
-}
-
-.hero-buttons {
-    display: flex;
-    gap: 14px;
-    flex-wrap: wrap;
-}
-
-.btn {
-    padding: 13px 22px;
-    border-radius: 12px;
-    font-weight: 700;
-    font-size: 14px;
-    transition: .3s;
-}
-
-.btn-primary {
-    background: linear-gradient(135deg, #8b5cf6, #ec4899);
-}
-
-.btn-secondary {
-    border: 1px solid rgba(255,255,255,.14);
-    background: rgba(255,255,255,.04);
-}
-
-.btn:hover {
-    transform: translateY(-3px);
-}
-
-
-/* =====================================================
-   PROFILE PHOTO
-===================================================== */
-
-.profile-wrap {
-    display: flex;
-    justify-content: center;
-}
-
-.profile-card {
-    width: min(360px, 100%);
-    padding: 12px;
-    border-radius: 35px;
-    background: linear-gradient(
-        135deg,
-        rgba(168,85,247,.8),
-        rgba(236,72,153,.4),
-        rgba(56,189,248,.6)
+.gradient{
+    background:linear-gradient(
+        90deg,
+        #a855f7,
+        #ec4899,
+        #22d3ee
     );
-    box-shadow: 0 30px 100px rgba(124,58,237,.25);
+    -webkit-background-clip:text;
+    background-clip:text;
+    color:transparent;
 }
 
-.profile-card-inner {
-    overflow: hidden;
-    border-radius: 25px;
-    background: #11121b;
-    aspect-ratio: 4 / 5;
+.hero p{
+    color:#9999a7;
+    font-size:17px;
+    max-width:590px;
+    margin:28px 0;
 }
 
-.profile-card img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+.buttons{
+    display:flex;
+    gap:13px;
+    flex-wrap:wrap;
 }
 
-
-/* =====================================================
-   SECTION COMMON
-===================================================== */
-
-section {
-    padding: 100px 0;
+.btn{
+    padding:13px 21px;
+    border-radius:12px;
+    font-size:13px;
+    font-weight:700;
+    transition:.3s;
 }
 
-.section-heading {
-    margin-bottom: 45px;
+.btn:hover{
+    transform:translateY(-3px);
 }
 
-.section-label {
-    color: #a855f7;
-    font-size: 13px;
-    font-weight: 700;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    margin-bottom: 10px;
+.primary{
+    background:linear-gradient(135deg,#8b5cf6,#ec4899);
 }
 
-.section-heading h2 {
-    font-size: clamp(36px, 5vw, 55px);
-    line-height: 1;
-    letter-spacing: -2px;
+.secondary{
+    border:1px solid rgba(255,255,255,.12);
+    background:rgba(255,255,255,.04);
 }
 
-.section-heading p {
-    color: #888895;
-    max-width: 600px;
-    margin-top: 15px;
+/* PROFILE */
+
+.profile-area{
+    display:flex;
+    justify-content:center;
 }
 
-
-/* =====================================================
-   ABOUT
-===================================================== */
-
-.about-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 60px;
+.profile{
+    width:350px;
+    aspect-ratio:4/5;
+    border-radius:32px;
+    padding:9px;
+    background:linear-gradient(
+        140deg,
+        #a855f7,
+        #ec4899,
+        #22d3ee
+    );
+    box-shadow:0 30px 100px rgba(124,58,237,.25);
 }
 
-.about-text {
-    color: #a7a7b5;
-    font-size: 17px;
-}
-
-.about-text p {
-    margin-bottom: 18px;
-}
-
-.about-info {
-    display: grid;
-    gap: 15px;
-}
-
-.info-box {
-    padding: 22px;
-    border: 1px solid rgba(255,255,255,.08);
-    background: rgba(255,255,255,.025);
-    border-radius: 18px;
-}
-
-.info-box small {
-    display: block;
-    color: #777784;
-    margin-bottom: 5px;
-}
-
-.info-box strong {
-    font-size: 16px;
-}
-
-
-/* =====================================================
-   SKILLS
-===================================================== */
-
-.skills-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 18px;
-}
-
-.skill-card {
-    position: relative;
-    overflow: hidden;
-    min-height: 220px;
-    border: 1px solid rgba(255,255,255,.08);
-    border-radius: 22px;
-    background: #10111a;
-    transition: .35s;
-}
-
-.skill-card:hover {
-    transform: translateY(-8px);
-    border-color: rgba(168,85,247,.5);
-}
-
-.skill-image {
-    height: 140px;
-    overflow: hidden;
-}
-
-.skill-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: .4s;
-}
-
-.skill-card:hover .skill-image img {
-    transform: scale(1.08);
-}
-
-.skill-content {
-    padding: 16px;
-}
-
-.skill-content h3 {
-    font-size: 17px;
-    margin-bottom: 4px;
-}
-
-.skill-content p {
-    color: #777784;
-    font-size: 12px;
-}
-
-
-/* =====================================================
-   PROJECTS
-===================================================== */
-
-.projects-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 28px;
-}
-
-.project-card {
-    overflow: hidden;
-    border-radius: 26px;
-    border: 1px solid rgba(255,255,255,.08);
-    background: rgba(255,255,255,.025);
-    transition: .35s;
-}
-
-.project-card:hover {
-    transform: translateY(-8px);
-    border-color: rgba(168,85,247,.35);
-}
-
-.project-image {
-    width: 100%;
-    aspect-ratio: 16 / 10;
-    overflow: hidden;
-    position: relative;
-}
-
-.project-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: .5s;
-}
-
-.project-card:hover .project-image img {
-    transform: scale(1.06);
-}
-
-.project-overlay {
-    position: absolute;
-    inset: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: rgba(0,0,0,.2);
-    opacity: 0;
-    transition: .3s;
-}
-
-.project-card:hover .project-overlay {
-    opacity: 1;
-}
-
-.view-project {
-    padding: 10px 16px;
-    border-radius: 50px;
-    background: #ffffff;
-    color: #111;
-    font-size: 12px;
-    font-weight: 700;
-}
-
-.project-info {
-    padding: 24px;
-}
-
-.project-category {
-    color: #a855f7;
-    font-size: 11px;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    margin-bottom: 7px;
-}
-
-.project-info h3 {
-    font-size: 23px;
-    margin-bottom: 7px;
-}
-
-.project-info p {
-    color: #858591;
-    font-size: 14px;
-}
-
-
-/* =====================================================
-   SERVICES
-===================================================== */
-
-.services-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-}
-
-.service-card {
-    padding: 30px;
-    border-radius: 22px;
-    border: 1px solid rgba(255,255,255,.08);
-    background: rgba(255,255,255,.025);
-}
-
-.service-number {
-    color: #a855f7;
-    font-size: 13px;
-    margin-bottom: 35px;
-}
-
-.service-card h3 {
-    font-size: 21px;
-    margin-bottom: 10px;
-}
-
-.service-card p {
-    color: #858591;
-    font-size: 14px;
-}
-
-
-/* =====================================================
-   CONTACT
-===================================================== */
-
-.contact-box {
-    position: relative;
-    overflow: hidden;
-    text-align: center;
-    padding: 80px 30px;
-    border-radius: 35px;
-    border: 1px solid rgba(255,255,255,.09);
+.profile-inner{
+    width:100%;
+    height:100%;
+    border-radius:25px;
+    overflow:hidden;
     background:
-        radial-gradient(
-            circle at 50% 0%,
-            rgba(168,85,247,.28),
-            transparent 50%
-        ),
-        #10111a;
+        radial-gradient(circle at 30% 25%,#a855f7 0,transparent 22%),
+        radial-gradient(circle at 75% 70%,#06b6d4 0,transparent 24%),
+        #11111a;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
 }
 
-.contact-box h2 {
-    font-size: clamp(40px, 6vw, 70px);
-    line-height: 1;
-    margin-bottom: 20px;
+.profile-icon{
+    width:125px;
+    height:125px;
+    border-radius:50%;
+    border:2px solid rgba(255,255,255,.5);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:48px;
+    background:rgba(255,255,255,.08);
 }
 
-.contact-box p {
-    color: #858591;
-    max-width: 550px;
-    margin: 0 auto 30px;
+.profile-inner h3{
+    margin-top:20px;
+    font-size:25px;
 }
 
-.contact-links {
-    display: flex;
-    justify-content: center;
-    gap: 12px;
-    flex-wrap: wrap;
+.profile-inner p{
+    margin:5px 0 0;
+    color:#aaa;
+    font-size:13px;
 }
 
+/* COMMON SECTION */
 
-/* =====================================================
-   FOOTER
-===================================================== */
-
-footer {
-    padding: 35px 0;
-    border-top: 1px solid rgba(255,255,255,.07);
-    color: #666674;
-    font-size: 13px;
+section{
+    padding:105px 0;
 }
 
-.footer-inner {
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
+.label{
+    color:#a855f7;
+    font-size:11px;
+    letter-spacing:3px;
+    font-weight:800;
+    margin-bottom:12px;
 }
 
+.heading{
+    font-size:clamp(36px,5vw,58px);
+    letter-spacing:-3px;
+    line-height:1;
+}
 
-/* =====================================================
-   MOBILE
-===================================================== */
+.subheading{
+    color:#777784;
+    max-width:620px;
+    margin-top:16px;
+}
 
-@media (max-width: 900px) {
+/* ABOUT */
 
-    .hero-grid {
-        grid-template-columns: 1fr;
-        text-align: center;
+.about-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:70px;
+}
+
+.about-text{
+    color:#9999a7;
+    font-size:17px;
+    line-height:1.8;
+}
+
+.about-text p{
+    margin-bottom:18px;
+}
+
+.details{
+    display:grid;
+    gap:14px;
+}
+
+.detail{
+    padding:20px;
+    border:1px solid rgba(255,255,255,.07);
+    background:rgba(255,255,255,.025);
+    border-radius:18px;
+}
+
+.detail span{
+    display:block;
+    color:#666673;
+    font-size:11px;
+    letter-spacing:2px;
+    margin-bottom:6px;
+}
+
+.detail strong{
+    font-size:15px;
+}
+
+/* SKILLS */
+
+.skills{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:18px;
+    margin-top:45px;
+}
+
+.skill{
+    min-height:245px;
+    border:1px solid rgba(255,255,255,.08);
+    border-radius:24px;
+    padding:20px;
+    background:#101018;
+    transition:.35s;
+    overflow:hidden;
+}
+
+.skill:hover{
+    transform:translateY(-8px);
+    border-color:rgba(168,85,247,.45);
+}
+
+.skill-art{
+    height:140px;
+    border-radius:17px;
+    margin-bottom:18px;
+    position:relative;
+    overflow:hidden;
+}
+
+.skill-art:before,
+.skill-art:after{
+    content:"";
+    position:absolute;
+    border-radius:50%;
+}
+
+.canva{
+    background:linear-gradient(135deg,#00c4cc,#7b2cff);
+}
+
+.canva:before{
+    width:90px;
+    height:90px;
+    background:#fff;
+    left:35px;
+    top:25px;
+}
+
+.canva:after{
+    width:90px;
+    height:90px;
+    border:12px solid #7b2cff;
+    right:30px;
+    top:20px;
+}
+
+.graphic{
+    background:linear-gradient(135deg,#ff512f,#dd2476);
+}
+
+.graphic:before{
+    width:100px;
+    height:100px;
+    background:#ffd166;
+    transform:rotate(18deg);
+    left:25px;
+    top:20px;
+}
+
+.graphic:after{
+    width:75px;
+    height:75px;
+    border:8px solid white;
+    right:30px;
+    bottom:18px;
+}
+
+.branding{
+    background:linear-gradient(135deg,#111827,#7c3aed);
+}
+
+.branding:before{
+    width:105px;
+    height:105px;
+    border:3px solid white;
+    left:30px;
+    top:18px;
+}
+
+.branding:after{
+    width:55px;
+    height:55px;
+    background:#ec4899;
+    right:40px;
+    bottom:20px;
+}
+
+.social{
+    background:linear-gradient(135deg,#0ea5e9,#8b5cf6);
+}
+
+.social:before{
+    width:105px;
+    height:70px;
+    border:3px solid white;
+    border-radius:18px;
+    left:28px;
+    top:30px;
+}
+
+.social:after{
+    width:20px;
+    height:20px;
+    background:#fff;
+    right:38px;
+    bottom:30px;
+}
+
+.skill h3{
+    font-size:18px;
+}
+
+.skill p{
+    color:#70707e;
+    font-size:12px;
+    margin-top:5px;
+}
+
+/* PROJECTS */
+
+.projects{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:25px;
+    margin-top:45px;
+}
+
+.project{
+    border:1px solid rgba(255,255,255,.08);
+    background:#101018;
+    border-radius:27px;
+    overflow:hidden;
+    transition:.35s;
+}
+
+.project:hover{
+    transform:translateY(-8px);
+    border-color:rgba(168,85,247,.4);
+}
+
+.poster{
+    width:100%;
+    aspect-ratio:16/10;
+    position:relative;
+    overflow:hidden;
+}
+
+/* POSTER 1 */
+
+.poster-one{
+    background:
+        radial-gradient(circle at 75% 25%,#e879f9,transparent 22%),
+        linear-gradient(135deg,#16052b,#5b21b6,#111827);
+}
+
+.poster-one .big{
+    position:absolute;
+    left:35px;
+    bottom:42px;
+    font-size:54px;
+    line-height:.82;
+    font-weight:900;
+    letter-spacing:-3px;
+}
+
+.poster-one .big span{
+    color:#e879f9;
+}
+
+.poster-one .circle{
+    position:absolute;
+    width:175px;
+    height:175px;
+    border:2px solid rgba(255,255,255,.75);
+    border-radius:50%;
+    right:50px;
+    top:45px;
+}
+
+.poster-one .small{
+    position:absolute;
+    left:37px;
+    top:30px;
+    font-size:11px;
+    letter-spacing:4px;
+}
+
+/* POSTER 2 */
+
+.poster-two{
+    background:
+        radial-gradient(circle at 75% 30%,#22d3ee,transparent 22%),
+        linear-gradient(135deg,#06152f,#1e3a8a,#111827);
+}
+
+.poster-two .main{
+    position:absolute;
+    left:35px;
+    top:65px;
+    font-size:55px;
+    line-height:.85;
+    font-weight:900;
+}
+
+.poster-two .main span{
+    color:#22d3ee;
+}
+
+.pill{
+    position:absolute;
+    padding:10px 17px;
+    border:1px solid rgba(255,255,255,.5);
+    border-radius:40px;
+    font-size:10px;
+    letter-spacing:2px;
+}
+
+.pill.one{
+    right:35px;
+    top:60px;
+    transform:rotate(8deg);
+}
+
+.pill.two{
+    right:65px;
+    top:120px;
+    transform:rotate(-8deg);
+}
+
+.pill.three{
+    right:30px;
+    top:180px;
+    transform:rotate(7deg);
+}
+
+/* POSTER 3 */
+
+.poster-three{
+    background:
+        radial-gradient(circle at 65% 20%,#fb7185,transparent 23%),
+        linear-gradient(135deg,#3b0764,#be185d,#1f1029);
+}
+
+.poster-three .small{
+    position:absolute;
+    top:30px;
+    left:35px;
+    font-size:11px;
+    letter-spacing:4px;
+}
+
+.poster-three .big{
+    position:absolute;
+    left:35px;
+    top:72px;
+    font-size:70px;
+    line-height:.8;
+    font-weight:900;
+}
+
+.poster-three .big span{
+    color:#fde047;
+}
+
+.poster-three .star{
+    position:absolute;
+    right:55px;
+    top:55px;
+    font-size:95px;
+    color:#fde047;
+}
+
+.poster-three .button{
+    position:absolute;
+    left:35px;
+    bottom:32px;
+    background:#fff;
+    color:#4c164c;
+    padding:9px 17px;
+    border-radius:30px;
+    font-size:10px;
+    font-weight:800;
+}
+
+/* POSTER 4 */
+
+.poster-four{
+    background:
+        radial-gradient(circle at 30% 30%,#38bdf8,transparent 22%),
+        linear-gradient(135deg,#082f49,#0f766e,#111827);
+}
+
+.poster-four .title{
+    position:absolute;
+    left:35px;
+    bottom:42px;
+    font-size:48px;
+    line-height:.85;
+    font-weight:900;
+}
+
+.poster-four .title span{
+    color:#67e8f9;
+}
+
+.poster-four .grid{
+    position:absolute;
+    width:230px;
+    height:230px;
+    right:25px;
+    top:25px;
+    background:
+        linear-gradient(rgba(255,255,255,.16) 1px,transparent 1px),
+        linear-gradient(90deg,rgba(255,255,255,.16) 1px,transparent 1px);
+    background-size:30px 30px;
+    transform:rotate(-8deg);
+}
+
+.project-info{
+    padding:23px;
+}
+
+.project-info .category{
+    color:#a855f7;
+    font-size:10px;
+    letter-spacing:2px;
+    margin-bottom:7px;
+}
+
+.project-info h3{
+    font-size:22px;
+}
+
+.project-info p{
+    color:#777784;
+    font-size:13px;
+    margin-top:6px;
+}
+
+/* SERVICES */
+
+.services{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:18px;
+    margin-top:45px;
+}
+
+.service{
+    padding:30px;
+    min-height:210px;
+    border-radius:23px;
+    border:1px solid rgba(255,255,255,.08);
+    background:#101018;
+}
+
+.service-number{
+    color:#a855f7;
+    font-size:12px;
+    margin-bottom:55px;
+}
+
+.service h3{
+    font-size:21px;
+    margin-bottom:9px;
+}
+
+.service p{
+    color:#777784;
+    font-size:13px;
+}
+
+/* CONTACT */
+
+.contact{
+    text-align:center;
+    padding:85px 30px;
+    border-radius:35px;
+    border:1px solid rgba(255,255,255,.08);
+    background:
+        radial-gradient(circle at 50% 0%,rgba(168,85,247,.25),transparent 55%),
+        #101018;
+}
+
+.contact h2{
+    font-size:clamp(40px,6vw,70px);
+    line-height:.95;
+    letter-spacing:-3px;
+    margin:14px 0 20px;
+}
+
+.contact p{
+    color:#777784;
+    max-width:550px;
+    margin:auto;
+}
+
+.contact-buttons{
+    display:flex;
+    justify-content:center;
+    gap:12px;
+    margin-top:30px;
+    flex-wrap:wrap;
+}
+
+/* FOOTER */
+
+footer{
+    padding:35px 0;
+    border-top:1px solid rgba(255,255,255,.06);
+    color:#666673;
+    font-size:12px;
+    margin-top:100px;
+}
+
+.footer{
+    display:flex;
+    justify-content:space-between;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:950px){
+
+    .hero-grid{
+        grid-template-columns:1fr;
+        text-align:center;
     }
 
-    .hero-description {
-        margin-left: auto;
-        margin-right: auto;
+    .hero p{
+        margin-left:auto;
+        margin-right:auto;
     }
 
-    .hero-buttons {
-        justify-content: center;
+    .buttons{
+        justify-content:center;
     }
 
-    .profile-wrap {
-        order: -1;
+    .profile-area{
+        order:-1;
     }
 
-    .skills-grid {
-        grid-template-columns: repeat(2, 1fr);
+    .skills{
+        grid-template-columns:repeat(2,1fr);
     }
 
-    .about-grid {
-        grid-template-columns: 1fr;
+    .about-grid{
+        grid-template-columns:1fr;
     }
 
-    .services-grid {
-        grid-template-columns: 1fr;
+    .services{
+        grid-template-columns:1fr;
     }
 }
 
+@media(max-width:650px){
 
-@media (max-width: 650px) {
-
-    .nav-links {
-        gap: 14px;
+    .menu{
+        gap:12px;
     }
 
-    .nav-links a {
-        font-size: 13px;
+    .menu a{
+        font-size:12px;
     }
 
-    .logo {
-        font-size: 25px;
+    .hero{
+        padding:70px 0;
     }
 
-    .hero {
-        min-height: auto;
-        padding: 70px 0;
+    .hero h1{
+        letter-spacing:-3px;
     }
 
-    .hero h1 {
-        letter-spacing: -2px;
+    .profile{
+        width:290px;
     }
 
-    .skills-grid {
-        grid-template-columns: 1fr 1fr;
+    .skills{
+        grid-template-columns:1fr;
     }
 
-    .projects-grid {
-        grid-template-columns: 1fr;
+    .projects{
+        grid-template-columns:1fr;
     }
 
-    .skill-card {
-        min-height: 200px;
-    }
-
-    .skill-image {
-        height: 120px;
-    }
-
-    .footer-inner {
-        flex-direction: column;
-        text-align: center;
+    .footer{
+        flex-direction:column;
+        text-align:center;
+        gap:8px;
     }
 }
-
-
-@media (max-width: 430px) {
-
-    .skills-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .nav-links a:nth-child(1) {
-        display: none;
-    }
-
-    .profile-card {
-        max-width: 300px;
-    }
-}
-
 </style>
 </head>
 
-
 <body>
 
+<!-- NAVBAR -->
 
-<!-- =====================================================
-     NAVBAR
-===================================================== -->
+<nav>
+<div class="container nav">
 
-<header class="navbar">
+    <a href="#" class="logo">
+        Badal<span>.</span>
+    </a>
 
-    <div class="container nav-inner">
-
-        <a href="#" class="logo">
-            Badal<span>.</span>
-        </a>
-
-        <nav class="nav-links">
-            <a href="#about">About</a>
-            <a href="#skills">Skills</a>
-            <a href="#projects">Work</a>
-            <a href="#contact">Contact</a>
-        </nav>
-
+    <div class="menu">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#work">Work</a>
+        <a href="#contact">Contact</a>
     </div>
 
-</header>
+</div>
+</nav>
 
 
-
-<!-- =====================================================
-     HERO
-===================================================== -->
-
-<main>
+<!-- HERO -->
 
 <section class="hero">
 
-    <div class="container hero-grid">
+<div class="container hero-grid">
 
-        <div>
+    <div>
 
-            <div class="hero-tag">
-                AVAILABLE FOR FREELANCE
-            </div>
+        <div class="badge">
+            CREATIVE DESIGNER
+        </div>
 
-            <h1>
-                Creative
-                <span class="gradient-text">
-                    Graphic Designer.
-                </span>
-            </h1>
+        <h1>
+            I create
+            <span class="gradient">
+                visuals
+            </span>
+            that stand out.
+        </h1>
 
-            <p class="hero-description">
-                I create modern, clean and engaging visual designs
-                for brands, social media and digital marketing.
-            </p>
+        <p>
+            Graphic design, branding and social media
+            creatives designed with a modern and
+            professional visual approach.
+        </p>
 
-            <div class="hero-buttons">
+        <div class="buttons">
 
-                <a href="#projects" class="btn btn-primary">
-                    View My Work
-                </a>
+            <a href="#work" class="btn primary">
+                Explore My Work
+            </a>
 
-                <a href="#contact" class="btn btn-secondary">
-                    Let's Work Together
-                </a>
-
-            </div>
+            <a href="#contact" class="btn secondary">
+                Contact Me
+            </a>
 
         </div>
 
+    </div>
 
-        <!-- YOUR PHOTO -->
 
-        <div class="profile-wrap">
+    <!-- PHOTO AREA -->
 
-            <div class="profile-card">
+    <div class="profile-area">
 
-                <div class="profile-card-inner">
+        <div class="profile">
 
-                    <!--
-                    IMPORTANT:
-                    Apni photo ka naam "profile.jpg"
-                    rakhkar index.html ke same folder mein upload karo.
-                    -->
+            <div class="profile-inner">
 
-                    <img
-                        src="profile.jpg"
-                        alt="Badal Profile Photo"
-                    >
+                <!--
+                BAAD MEIN YAHAN TUMHARI PHOTO LAGA SAKTE HAIN.
+                PHOTO KA NAAM profile.jpg RAKHNA.
+                -->
 
+                <div class="profile-icon">
+                    ✦
                 </div>
+
+                <h3>Badal</h3>
+
+                <p>
+                    Graphic Designer
+                </p>
 
             </div>
 
@@ -754,312 +911,327 @@ footer {
 
     </div>
 
+</div>
+
 </section>
 
 
-
-<!-- =====================================================
-     ABOUT
-===================================================== -->
+<!-- ABOUT -->
 
 <section id="about">
 
-    <div class="container">
+<div class="container">
 
-        <div class="section-heading">
+    <div class="label">
+        ABOUT ME
+    </div>
 
-            <div class="section-label">
-                ABOUT ME
-            </div>
+    <h2 class="heading">
+        Design with purpose.
+    </h2>
 
-            <h2>
-                Turning ideas into visuals.
-            </h2>
+    <p class="subheading">
+        A little about my creative journey and what I love doing.
+    </p>
+
+
+    <div class="about-grid" style="margin-top:50px;">
+
+        <div class="about-text">
+
+            <p>
+                Hi, I'm Badal — a creative designer
+                interested in graphic design, branding
+                and digital content.
+            </p>
+
+            <p>
+                I enjoy turning simple ideas into
+                clean, attractive and meaningful
+                visual designs.
+            </p>
+
+            <p>
+                I'm continuously improving my skills
+                and building projects for my portfolio.
+            </p>
 
         </div>
 
 
-        <div class="about-grid">
+        <div class="details">
 
-            <div class="about-text">
-
-                <p>
-                    Hello, I'm Badal. I'm a creative designer
-                    passionate about creating modern and
-                    visually appealing designs.
-                </p>
-
-                <p>
-                    I enjoy working on branding, social media
-                    graphics, marketing creatives and digital
-                    visual content.
-                </p>
-
-                <p>
-                    This portfolio showcases my creative work,
-                    skills and design journey.
-                </p>
-
+            <div class="detail">
+                <span>ROLE</span>
+                <strong>Graphic Designer</strong>
             </div>
 
+            <div class="detail">
+                <span>FOCUS</span>
+                <strong>Branding • Social Media • Posters</strong>
+            </div>
 
-            <div class="about-info">
-
-                <div class="info-box">
-                    <small>ROLE</small>
-                    <strong>Graphic Designer</strong>
-                </div>
-
-                <div class="info-box">
-                    <small>FOCUS</small>
-                    <strong>Branding • Social Media • Marketing</strong>
-                </div>
-
-                <div class="info-box">
-                    <small>WORK TYPE</small>
-                    <strong>Freelance / Creative Projects</strong>
-                </div>
-
+            <div class="detail">
+                <span>WORK</span>
+                <strong>Freelance & Creative Projects</strong>
             </div>
 
         </div>
 
     </div>
 
+</div>
+
 </section>
 
 
-
-<!-- =====================================================
-     SKILLS
-===================================================== -->
+<!-- SKILLS -->
 
 <section id="skills">
 
-    <div class="container">
+<div class="container">
 
-        <div class="section-heading">
+    <div class="label">
+        SKILLS
+    </div>
 
-            <div class="section-label">
-                MY SKILLS
-            </div>
+    <h2 class="heading">
+        My creative toolkit.
+    </h2>
 
-            <h2>
-                Tools I create with.
-            </h2>
+    <p class="subheading">
+        Tools and areas I use to create digital designs.
+    </p>
+
+
+    <div class="skills">
+
+
+        <div class="skill">
+
+            <div class="skill-art canva"></div>
+
+            <h3>Canva</h3>
 
             <p>
-                A selection of creative tools and design areas
-                I work with.
+                Social media posts & visual creatives
             </p>
 
         </div>
 
 
-        <div class="skills-grid">
+        <div class="skill">
 
+            <div class="skill-art graphic"></div>
 
-            <!-- CANVA -->
+            <h3>Graphic Design</h3>
 
-            <div class="skill-card">
-
-                <div class="skill-image">
-
-                    <img
-                        src="https://images.unsplash.com/photo-1558655146-9f40138edfeb?auto=format&fit=crop&w=900&q=80"
-                        alt="Canva Design"
-                    >
-
-                </div>
-
-                <div class="skill-content">
-
-                    <h3>Canva</h3>
-
-                    <p>
-                        Social Media & Creative Design
-                    </p>
-
-                </div>
-
-            </div>
-
-
-            <!-- GRAPHIC DESIGN -->
-
-            <div class="skill-card">
-
-                <div class="skill-image">
-
-                    <img
-                        src="https://images.unsplash.com/photo-1561070791-2526d30994b5?auto=format&fit=crop&w=900&q=80"
-                        alt="Graphic Design"
-                    >
-
-                </div>
-
-                <div class="skill-content">
-
-                    <h3>Graphic Design</h3>
-
-                    <p>
-                        Visual Design & Composition
-                    </p>
-
-                </div>
-
-            </div>
-
-
-            <!-- BRANDING -->
-
-            <div class="skill-card">
-
-                <div class="skill-image">
-
-                    <img
-                        src="https://images.unsplash.com/photo-1634942537034-2531766767d1?auto=format&fit=crop&w=900&q=80"
-                        alt="Branding"
-                    >
-
-                </div>
-
-                <div class="skill-content">
-
-                    <h3>Branding</h3>
-
-                    <p>
-                        Identity & Visual Systems
-                    </p>
-
-                </div>
-
-            </div>
-
-
-            <!-- SOCIAL MEDIA -->
-
-            <div class="skill-card">
-
-                <div class="skill-image">
-
-                    <img
-                        src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&w=900&q=80"
-                        alt="Social Media Design"
-                    >
-
-                </div>
-
-                <div class="skill-content">
-
-                    <h3>Social Media</h3>
-
-                    <p>
-                        Posts & Digital Creatives
-                    </p>
-
-                </div>
-
-            </div>
-
+            <p>
+                Posters, banners & digital graphics
+            </p>
 
         </div>
 
+
+        <div class="skill">
+
+            <div class="skill-art branding"></div>
+
+            <h3>Branding</h3>
+
+            <p>
+                Logo, identity & visual direction
+            </p>
+
+        </div>
+
+
+        <div class="skill">
+
+            <div class="skill-art social"></div>
+
+            <h3>Social Media</h3>
+
+            <p>
+                Creative content & campaigns
+            </p>
+
+        </div>
+
+
     </div>
+
+</div>
 
 </section>
 
 
+<!-- WORK -->
 
-<!-- =====================================================
-     PROJECTS
-===================================================== -->
+<section id="work">
 
-<section id="projects">
+<div class="container">
 
-    <div class="container">
+    <div class="label">
+        SELECTED WORK
+    </div>
 
-        <div class="section-heading">
+    <h2 class="heading">
+        Featured projects.
+    </h2>
 
-            <div class="section-label">
-                SELECTED WORK
+    <p class="subheading">
+        A selection of visual concepts created for my portfolio.
+    </p>
+
+
+    <div class="projects">
+
+
+        <!-- PROJECT 1 -->
+
+        <article class="project">
+
+            <div class="poster poster-one">
+
+                <div class="small">
+                    BRANDING / 01
+                </div>
+
+                <div class="circle"></div>
+
+                <div class="big">
+                    BRAND<br>
+                    <span>IDENTITY</span>
+                </div>
+
             </div>
 
-            <h2>
-                Some of my work.
-            </h2>
+            <div class="project-info">
 
-            <p>
-                A collection of creative projects and
-                design concepts.
-            </p>
-
-        </div>
-
-
-        <div class="projects-grid">
-
-
-            <!-- PROJECT 1 -->
-
-            <article class="project-card">
-
-                <div class="project-image">
-
-                    <img
-                        src="https://images.unsplash.com/photo-1634942537034-2531766767d1?auto=format&fit=crop&w=1200&q=85"
-                        alt="Branding Project"
-                    >
-
-                    <div class="project-overlay">
-                        <span class="view-project">
-                            VIEW PROJECT
-                        </span>
-                    </div>
-
+                <div class="category">
+                    BRANDING
                 </div>
 
-                <div class="project-info">
+                <h3>
+                    Brand Identity
+                </h3>
 
-                    <div class="project-category">
-                        BRANDING
-                    </div>
+                <p>
+                    Modern identity concept with
+                    a bold visual direction.
+                </p>
 
-                    <h3>
-                        Brand Identity
-                    </h3>
+            </div>
 
-                    <p>
-                        Modern visual identity concept
-                        designed for a fictional brand.
-                    </p>
+        </article>
 
+
+        <!-- PROJECT 2 -->
+
+        <article class="project">
+
+            <div class="poster poster-two">
+
+                <div class="main">
+                    MAKE<br>
+                    <span>IT POP.</span>
                 </div>
 
-            </article>
-
-
-
-            <!-- PROJECT 2 -->
-
-            <article class="project-card">
-
-                <div class="project-image">
-
-                    <img
-                        src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&w=1200&q=85"
-                        alt="Social Media Project"
-                    >
-
-                    <div class="project-overlay">
-                        <span class="view-project">
-                            VIEW PROJECT
-                        </span>
-                    </div>
-
+                <div class="pill one">
+                    CREATE
                 </div>
 
-                <div class="project-info">
+                <div class="pill two">
+                    DESIGN
+                </div>
 
-                    <div class="project-category">
-               
+                <div class="pill three">
+                    SHARE
+                </div>
+
+            </div>
+
+            <div class="project-info">
+
+                <div class="category">
+                    SOCIAL MEDIA
+                </div>
+
+                <h3>
+                    Social Media Campaign
+                </h3>
+
+                <p>
+                    Digital campaign concept designed
+                    for modern social platforms.
+                </p>
+
+            </div>
+
+        </article>
+
+
+        <!-- PROJECT 3 -->
+
+        <article class="project">
+
+            <div class="poster poster-three">
+
+                <div class="small">
+                    DIGITAL CAMPAIGN / 03
+                </div>
+
+                <div class="big">
+                    GO<br>
+                    <span>BIG.</span>
+                </div>
+
+                <div class="star">
+                    ✦
+                </div>
+
+                <div class="button">
+                    LAUNCH →
+                </div>
+
+            </div>
+
+            <div class="project-info">
+
+                <div class="category">
+                    MARKETING
+                </div>
+
+                <h3>
+                    Marketing Creative
+                </h3>
+
+                <p>
+                    Promotional design created to
+                    capture attention.
+                </p>
+
+            </div>
+
+        </article>
+
+
+        <!-- PROJECT 4 -->
+
+        <article class="project">
+
+            <div class="poster poster-four">
+
+                <div class="grid"></div>
+
+                <div class="title">
+                    DIGITAL<br>
+                    <span>CREATIVE</span>
+                </div>
+
+            </div>
+
+            <div class="project-info">
+
+            
