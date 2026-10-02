@@ -1,376 +1,599 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Badal Kumar | Graphic Designer</title>
+<title>Badal | Graphic Designer</title>
 
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: Arial, sans-serif;
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial, sans-serif;
+    background:#08080d;
+    color:white;
+    overflow-x:hidden;
+}
+
+/* Animated Background */
+body::before{
+    content:"";
+    position:fixed;
+    width:600px;
+    height:600px;
+    background:radial-gradient(circle,#8b3dff55,transparent 65%);
+    top:-200px;
+    left:-200px;
+    z-index:-2;
+    animation:moveGlow 8s infinite alternate;
+}
+
+body::after{
+    content:"";
+    position:fixed;
+    width:600px;
+    height:600px;
+    background:radial-gradient(circle,#00c6ff44,transparent 65%);
+    right:-250px;
+    bottom:-200px;
+    z-index:-2;
+    animation:moveGlow2 10s infinite alternate;
+}
+
+@keyframes moveGlow{
+    from{transform:translate(0,0);}
+    to{transform:translate(180px,120px);}
+}
+
+@keyframes moveGlow2{
+    from{transform:translate(0,0);}
+    to{transform:translate(-150px,-100px);}
+}
+
+/* Navigation */
+nav{
+    position:fixed;
+    top:0;
+    width:100%;
+    padding:20px 7%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:#08080dcc;
+    backdrop-filter:blur(15px);
+    border-bottom:1px solid #ffffff12;
+    z-index:100;
+}
+
+.logo{
+    font-size:28px;
+    font-weight:bold;
+}
+
+.logo span{
+    color:#a855f7;
+}
+
+nav ul{
+    display:flex;
+    gap:30px;
+    list-style:none;
+}
+
+nav a{
+    color:#ddd;
+    text-decoration:none;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:#a855f7;
+}
+
+/* Hero */
+.hero{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:120px 20px 60px;
+}
+
+.hero-content{
+    max-width:850px;
+}
+
+.badge{
+    display:inline-block;
+    padding:9px 18px;
+    border:1px solid #a855f755;
+    border-radius:30px;
+    color:#c084fc;
+    background:#a855f710;
+    margin-bottom:25px;
+}
+
+.hero h1{
+    font-size:clamp(48px,9vw,90px);
+    line-height:1;
+    margin-bottom:25px;
+}
+
+.hero h1 span{
+    background:linear-gradient(90deg,#a855f7,#6366f1,#22d3ee);
+    -webkit-background-clip:text;
+    color:transparent;
+}
+
+.hero p{
+    color:#aaa;
+    font-size:20px;
+    line-height:1.7;
+    margin:auto;
+    max-width:650px;
+}
+
+.buttons{
+    margin-top:35px;
+    display:flex;
+    justify-content:center;
+    gap:15px;
+    flex-wrap:wrap;
+}
+
+.btn{
+    padding:15px 28px;
+    border-radius:12px;
+    text-decoration:none;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.primary{
+    color:white;
+    background:linear-gradient(90deg,#9333ea,#6366f1);
+    box-shadow:0 0 30px #8b5cf655;
+}
+
+.secondary{
+    color:white;
+    border:1px solid #ffffff22;
+    background:#ffffff08;
+}
+
+.btn:hover{
+    transform:translateY(-4px);
+}
+
+/* Sections */
+section{
+    padding:100px 7%;
+}
+
+.section-title{
+    text-align:center;
+    font-size:42px;
+    margin-bottom:50px;
+}
+
+.section-title span{
+    color:#a855f7;
+}
+
+/* About */
+.about{
+    max-width:1000px;
+    margin:auto;
+    text-align:center;
+}
+
+.about p{
+    color:#aaa;
+    font-size:18px;
+    line-height:1.9;
+}
+
+/* Skills */
+.skills{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+    gap:20px;
+    max-width:1000px;
+    margin:auto;
+}
+
+.skill{
+    padding:30px 20px;
+    text-align:center;
+    border:1px solid #ffffff12;
+    background:linear-gradient(145deg,#ffffff0b,#ffffff03);
+    border-radius:20px;
+    transition:.3s;
+}
+
+.skill:hover{
+    transform:translateY(-8px);
+    border-color:#a855f755;
+    box-shadow:0 15px 40px #00000066;
+}
+
+.skill-icon{
+    font-size:38px;
+    margin-bottom:15px;
+}
+
+.skill h3{
+    margin-bottom:8px;
+}
+
+.skill p{
+    color:#888;
+    font-size:14px;
+}
+
+/* Projects */
+.projects{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(270px,1fr));
+    gap:25px;
+    max-width:1100px;
+    margin:auto;
+}
+
+.project{
+    overflow:hidden;
+    border:1px solid #ffffff12;
+    border-radius:22px;
+    background:#ffffff06;
+    transition:.35s;
+}
+
+.project:hover{
+    transform:translateY(-10px);
+    box-shadow:0 20px 50px #00000066;
+}
+
+.project-preview{
+    height:220px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:45px;
+    background:
+    radial-gradient(circle at 30% 30%,#c084fc,transparent 30%),
+    linear-gradient(135deg,#111827,#4c1d95,#111827);
+}
+
+.project:nth-child(2) .project-preview{
+    background:
+    radial-gradient(circle at 70% 30%,#22d3ee,transparent 30%),
+    linear-gradient(135deg,#082f49,#312e81,#111827);
+}
+
+.project:nth-child(3) .project-preview{
+    background:
+    radial-gradient(circle at 50% 40%,#f472b6,transparent 30%),
+    linear-gradient(135deg,#3b0764,#831843,#111827);
+}
+
+.project-info{
+    padding:22px;
+}
+
+.project-info h3{
+    margin-bottom:10px;
+}
+
+.project-info p{
+    color:#999;
+    line-height:1.6;
+    font-size:14px;
+}
+
+/* Contact */
+.contact{
+    max-width:800px;
+    margin:auto;
+    text-align:center;
+}
+
+.contact p{
+    color:#999;
+    font-size:18px;
+    margin-bottom:30px;
+}
+
+.contact-box{
+    padding:35px;
+    border:1px solid #ffffff12;
+    background:#ffffff06;
+    border-radius:22px;
+}
+
+.email{
+    color:#c084fc;
+    font-size:20px;
+    text-decoration:none;
+}
+
+/* Footer */
+footer{
+    text-align:center;
+    padding:40px 20px;
+    border-top:1px solid #ffffff10;
+    color:#777;
+}
+
+/* Mobile */
+@media(max-width:650px){
+
+    nav{
+        padding:18px 20px;
     }
 
-    body {
-      background: #0f0f14;
-      color: white;
-      line-height: 1.6;
+    nav ul{
+        gap:15px;
     }
 
-    nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 20px 8%;
-      position: sticky;
-      top: 0;
-      background: rgba(15,15,20,0.95);
-      z-index: 10;
+    nav ul li:nth-child(2),
+    nav ul li:nth-child(3){
+        display:none;
     }
 
-    .logo {
-      font-size: 24px;
-      font-weight: bold;
+    .hero{
+        padding-top:140px;
     }
 
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin-left: 25px;
+    .hero h1{
+        font-size:52px;
     }
 
-    nav a:hover {
-      color: #a855f7;
+    .hero p{
+        font-size:17px;
     }
 
-    .hero {
-      min-height: 90vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 50px 8%;
+    section{
+        padding:75px 20px;
     }
 
-    .hero h1 {
-      font-size: 55px;
-      margin-bottom: 15px;
+    .section-title{
+        font-size:34px;
     }
-
-    .hero h1 span {
-      color: #a855f7;
-    }
-
-    .hero p {
-      color: #bdbdbd;
-      max-width: 650px;
-      margin: auto;
-      font-size: 18px;
-    }
-
-    .btn {
-      display: inline-block;
-      margin-top: 30px;
-      padding: 13px 25px;
-      background: #a855f7;
-      color: white;
-      text-decoration: none;
-      border-radius: 8px;
-      font-weight: bold;
-    }
-
-    section {
-      padding: 80px 8%;
-    }
-
-    .title {
-      text-align: center;
-      font-size: 35px;
-      margin-bottom: 40px;
-    }
-
-    .about {
-      max-width: 800px;
-      margin: auto;
-      text-align: center;
-      color: #cfcfcf;
-    }
-
-    .skills {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 15px;
-    }
-
-    .skill {
-      background: #1b1b24;
-      padding: 15px 25px;
-      border-radius: 10px;
-      border: 1px solid #292934;
-    }
-
-    .projects {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 25px;
-    }
-
-    .project {
-      background: #1b1b24;
-      padding: 20px;
-      border-radius: 12px;
-      transition: 0.3s;
-    }
-
-    .project:hover {
-      transform: translateY(-5px);
-    }
-
-    .project img {
-      width: 100%;
-      height: 220px;
-      object-fit: cover;
-      border-radius: 8px;
-      margin-bottom: 15px;
-    }
-
-    .project h3 {
-      margin-bottom: 8px;
-    }
-
-    .project p {
-      color: #aaa;
-    }
-
-    .services {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 20px;
-    }
-
-    .service {
-      background: #1b1b24;
-      padding: 25px;
-      border-radius: 12px;
-      text-align: center;
-    }
-
-    .service h3 {
-      color: #a855f7;
-      margin-bottom: 10px;
-    }
-
-    .contact {
-      text-align: center;
-    }
-
-    .contact p {
-      color: #bbb;
-      margin: 10px;
-    }
-
-    footer {
-      text-align: center;
-      padding: 25px;
-      background: #09090c;
-      color: #888;
-    }
-
-    @media (max-width: 600px) {
-      .hero h1 {
-        font-size: 40px;
-      }
-
-      nav {
-        padding: 15px 5%;
-      }
-
-      nav a {
-        margin-left: 10px;
-        font-size: 14px;
-      }
-    }
-  </style>
+}
+</style>
 </head>
 
 <body>
 
-  <nav>
-    <div class="logo">Badal.</div>
+<!-- NAVIGATION -->
+<nav>
+    <div class="logo">Badal<span>.</span></div>
 
-    <div>
-      <a href="#about">About</a>
-      <a href="#skills">Skills</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
+    <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+
+
+<!-- HERO -->
+<section class="hero">
+
+    <div class="hero-content">
+
+        <div class="badge">
+            ✦ Available for Freelance Work
+        </div>
+
+        <h1>
+            Hi, I'm <span>Badal</span>
+        </h1>
+
+        <p>
+            Graphic Designer creating modern, creative and
+            eye-catching designs for brands, businesses,
+            social media and personal projects.
+        </p>
+
+        <div class="buttons">
+
+            <a href="#projects" class="btn primary">
+                View My Work
+            </a>
+
+            <a href="#contact" class="btn secondary">
+                Contact Me
+            </a>
+
+        </div>
+
     </div>
-  </nav>
+
+</section>
 
 
-  <section class="hero">
-    <div>
-      <h1>Hi, I'm <span>Badal</span></h1>
+<!-- ABOUT -->
+<section id="about">
 
-      <h2>Graphic Designer</h2>
-
-      <p>
-        I create creative and modern designs for brands,
-        social media, businesses and personal projects.
-      </p>
-
-      <a href="#projects" class="btn">View My Work</a>
-    </div>
-  </section>
-
-
-  <section id="about">
-
-    <h2 class="title">About Me</h2>
+    <h2 class="section-title">
+        About <span>Me</span>
+    </h2>
 
     <div class="about">
-      <p>
-        I am a BBA student interested in Graphic Design,
-        Digital Marketing and Freelancing. I enjoy creating
-        attractive visual designs and learning new creative skills.
-      </p>
+
+        <p>
+            I'm Badal, a creative Graphic Designer who enjoys
+            turning ideas into clean, modern and attractive visuals.
+            I focus on social media designs, branding, posters,
+            promotional creatives and digital content.
+        </p>
+
     </div>
 
-  </section>
+</section>
 
 
-  <section id="skills">
+<!-- SKILLS -->
+<section id="skills">
 
-    <h2 class="title">My Skills</h2>
+    <h2 class="section-title">
+        My <span>Skills</span>
+    </h2>
 
     <div class="skills">
 
-      <div class="skill">Canva</div>
-      <div class="skill">Graphic Design</div>
-      <div class="skill">Social Media Design</div>
-      <div class="skill">Poster Design</div>
-      <div class="skill">Thumbnail Design</div>
-      <div class="skill">Presentation Design</div>
-      <div class="skill">Basic Photoshop</div>
-      <div class="skill">Digital Marketing</div>
+        <div class="skill">
+            <div class="skill-icon">🎨</div>
+            <h3>Graphic Design</h3>
+            <p>Creative visual design</p>
+        </div>
+
+        <div class="skill">
+            <div class="skill-icon">✨</div>
+            <h3>Canva</h3>
+            <p>Social media & branding</p>
+        </div>
+
+        <div class="skill">
+            <div class="skill-icon">🖼️</div>
+            <h3>Poster Design</h3>
+            <p>Modern promotional designs</p>
+        </div>
+
+        <div class="skill">
+            <div class="skill-icon">📱</div>
+            <h3>Social Media</h3>
+            <p>Posts & creative content</p>
+        </div>
 
     </div>
 
-  </section>
+</section>
 
 
-  <section id="projects">
+<!-- PROJECTS -->
+<section id="projects">
 
-    <h2 class="title">My Projects</h2>
+    <h2 class="section-title">
+        My <span>Projects</span>
+    </h2>
 
     <div class="projects">
 
-      <div class="project">
-        <img src="https://placehold.co/600x400" alt="Social Media Design">
+        <div class="project">
 
-        <h3>Social Media Post</h3>
+            <div class="project-preview">
+                🎨
+            </div>
 
-        <p>
-          Creative social media design for brand promotion.
-        </p>
-      </div>
+            <div class="project-info">
 
+                <h3>Branding Design</h3>
 
-      <div class="project">
-        <img src="https://placehold.co/600x400" alt="Poster Design">
+                <p>
+                    Modern branding concept created
+                    for a fictional brand.
+                </p>
 
-        <h3>Poster Design</h3>
+            </div>
 
-        <p>
-          Modern promotional poster created for a business.
-        </p>
-      </div>
+        </div>
 
 
-      <div class="project">
-        <img src="https://placehold.co/600x400" alt="Thumbnail Design">
+        <div class="project">
 
-        <h3>YouTube Thumbnail</h3>
+            <div class="project-preview">
+                📱
+            </div>
 
-        <p>
-          Eye-catching thumbnail design for digital content.
-        </p>
-      </div>
+            <div class="project-info">
 
+                <h3>Social Media Design</h3>
 
-      <div class="project">
-        <img src="https://placehold.co/600x400" alt="Business Design">
+                <p>
+                    Creative social media post design
+                    focused on modern visual style.
+                </p>
 
-        <h3>Business Design</h3>
+            </div>
 
-        <p>
-          Branding and promotional design concept.
-        </p>
-      </div>
-
-    </div>
-
-  </section>
+        </div>
 
 
-  <section>
+        <div class="project">
 
-    <h2 class="title">Services</h2>
+            <div class="project-preview">
+                🚀
+            </div>
 
-    <div class="services">
+            <div class="project-info">
 
-      <div class="service">
-        <h3>Social Media</h3>
-        <p>Instagram posts, stories and promotional creatives.</p>
-      </div>
+                <h3>Marketing Creative</h3>
 
-      <div class="service">
-        <h3>Poster Design</h3>
-        <p>Professional posters for events and businesses.</p>
-      </div>
+                <p>
+                    Promotional creative designed
+                    for digital marketing campaigns.
+                </p>
 
-      <div class="service">
-        <h3>Thumbnail</h3>
-        <p>Creative thumbnails designed to attract attention.</p>
-      </div>
+            </div>
 
-      <div class="service">
-        <h3>Presentation</h3>
-        <p>Clean and professional PowerPoint presentations.</p>
-      </div>
+        </div>
 
     </div>
 
-  </section>
+</section>
 
 
-  <section id="contact">
+<!-- CONTACT -->
+<section id="contact">
 
-    <h2 class="title">Let's Work Together</h2>
+    <h2 class="section-title">
+        Let's <span>Work Together</span>
+    </h2>
 
     <div class="contact">
 
-      <p>Email: your-email@example.com</p>
+        <p>
+            Have a project or design idea?
+            Feel free to contact me.
+        </p>
 
-      <p>Instagram: @yourusername</p>
+        <div class="contact-box">
 
-      <p>GitHub: github.com/yourusername</p>
+            <a class="email"
+               href="mailto: badalkumar160305@gmail.com">
+                YOUR_EMAIL@gmail.com
+            </a>
 
-      <a href="mailto:your-email@example.com" class="btn">
-        Contact Me
-      </a>
+            <br><br>
+
+            <a href="mailto:YOUR_EMAIL@gmail.com"
+               class="btn primary">
+                Send Me a Message
+            </a>
+
+        </div>
 
     </div>
 
-  </section>
+</section>
 
 
-  <footer>
-    © 2026 Badal Kumar | Graphic Designer
-  </footer>
+<!-- FOOTER -->
+<footer>
+
+    © 2026 Badal. All Rights Reserved.
+
+</footer>
 
 </body>
   </html>
